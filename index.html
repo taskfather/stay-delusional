@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="Delusional" />
+  <title>Stay Delusional</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="favicon.svg" />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      overscroll-behavior: none;
+      background: #000;
+      color: #fff;
+      font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      touch-action: manipulation;
+    }
+    #app {
+      position: fixed;
+      inset: 0;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: #1a1a1a;
+    }
+    .fill { height: 100%; background: #fff; width: 0; }
+    .card {
+      height: 100%;
+      max-width: 36rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: max(4.5rem, env(safe-area-inset-top)) 1.5rem max(5rem, env(safe-area-inset-bottom));
+    }
+    .kicker {
+      margin: 0 0 0.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #888;
+      font-weight: 500;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 6.5vw, 2.75rem);
+      font-weight: 560;
+      letter-spacing: -0.035em;
+      line-height: 1.12;
+    }
+    .body { margin-top: 1.35rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .body p {
+      margin: 0;
+      font-size: clamp(1.02rem, 3.4vw, 1.2rem);
+      line-height: 1.45;
+      color: #ececec;
+    }
+    footer {
+      position: absolute;
+      left: 1.25rem;
+      right: 1.25rem;
+      bottom: max(1.1rem, env(safe-area-inset-bottom));
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #666;
+      pointer-events: none;
+    }
+    footer .hint { color: #888; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <article class="card">
+      <p class="kicker" id="kicker"></p>
+      <h1 id="title"></h1>
+      <div class="body" id="body"></div>
+    </article>
+    <footer>
+      <span id="count"></span>
+      <span class="hint" id="hint"></span>
+    </footer>
+  </div>
+  <script>
+    const slides = [
+      { title: "Stay delusional", lines: ["Dein Mindset-Guide zur Verwirklichung großer Ziele.", "Jeden Tag. Eine Folie nach der anderen."] },
+      { kicker: "Zusammenfassung", title: "Erfolg beginnt im Kopf", lines: ["Clips von Unternehmern, Athleten und Coaches.", "Wer sich selbst nicht zuerst als erfolgreich sieht, wird es nie werden."] },
+      { kicker: "Zusammenfassung", title: "Vier Prinzipien", lines: ["Visualisierung.", "Affirmationen.", "Risikobereitschaft.", "Schnelligkeit."] },
+      { kicker: "Zusammenfassung", title: "Delusional neu denken", lines: ["Nicht Schwäche.", "Sondern die Voraussetzung, um Großes zu erreichen."] },
+      { kicker: "Zusammenfassung", title: "Nur dann Wahn", lines: ["Delusion is only delusional when you don't accomplish the goals of making your delusions a reality."] },
+      { kicker: "Täglich einreden", title: "Wiederholung", lines: ["Ein Delusional Mindset baut sich nur durch Wiederholung auf.", "Jeden Tag.", "Am Anfang klingt es lächerlich. Genau das ist der Punkt."] },
+      { kicker: "Morgens", title: "Sofort nach dem Aufwachen", lines: ["Vier Sätze. Laut. Bevor der Tag dich übernimmt."] },
+      { kicker: "Morgens", title: "Satz 1", lines: ["Mir wird heute etwas Außergewöhnliches passieren."] },
+      { kicker: "Morgens", title: "Satz 2", lines: ["Ich bin bereits die Person, die ich werden will."] },
+      { kicker: "Morgens", title: "Satz 3", lines: ["Ich habe bereits mein Ziel. Es ist nur eine Frage der Zeit."] },
+      { kicker: "Morgens", title: "Satz 4", lines: ["Im Spiegel:", "Ich liebe dich. Ich weiß, wo du hingehst."] },
+      { kicker: "Tagsüber", title: "Unterwegs im Tag", lines: ["Fünf Sätze. Immer wieder. Besonders wenn du zögerst."] },
+      { kicker: "Tagsüber", title: "Satz 1", lines: ["Ich zahle für alles mit meiner Kreativität, nicht mit meiner Zeit."] },
+      { kicker: "Tagsüber", title: "Satz 2", lines: ["Geschwindigkeit ist mein Vorteil.", "Ich handle, während andere noch nachdenken."] },
+      { kicker: "Tagsüber", title: "Satz 3", lines: ["Meine Träume sind größer als meine Ängste."] },
+      { kicker: "Tagsüber", title: "Satz 4", lines: ["Ich bin immer zur richtigen Zeit am richtigen Ort."] },
+      { kicker: "Tagsüber", title: "Satz 5", lines: ["Geld arbeitet für mich."] },
+      { kicker: "Abends", title: "Direkt vor dem Einschlafen", lines: ["Das Gehirn nimmt im Theta-Schlafzustand tiefer auf."] },
+      { kicker: "Abends", title: "Satz 1", lines: ["Alles läuft perfekt für mich.", "Alles entwickelt sich zu meinem Besten."] },
+      { kicker: "Abends", title: "Satz 2", lines: ["Aus dieser Situation entsteht nur Gutes.", "Ich bin sicher."] },
+      { kicker: "Abends", title: "Ziele laut", lines: ["Lies deine Ziele laut im Präsens vor.", "Ich bin. Ich habe. Ich verdiene."] },
+      { kicker: "Gehirn", title: "Kein Unterschied", lines: ["Das Gehirn kennt keinen Unterschied zwischen einem echten Erlebnis und einer lebhaft vorgestellten Situation.", "Für das Gehirn ist es dasselbe."] },
+      { kicker: "Fragen", title: "Schreib auf Papier", lines: ["Nicht tippen. Handschriftlich.", "Das Gehirn verarbeitet es tiefer."] },
+      { kicker: "Teil 1", title: "Richtung finden", lines: ["Wer bin ich. Und wo will ich hin."] },
+      { kicker: "Frage 1", title: "Wer bin ich wirklich", lines: ["Unabhängig davon, was andere von mir erwarten."] },
+      { kicker: "Frage 2", title: "In 5 bis 10 Jahren", lines: ["Wo will ich stehen."] },
+      { kicker: "Frage 3", title: "Ohne Scheitern", lines: ["Was würde ich tun, wenn Scheitern unmöglich wäre."] },
+      { kicker: "Frage 4", title: "Das große Ziel", lines: ["Welches Ziel ist so groß, dass Menschen darüber lachen, wenn ich es nenne."] },
+      { kicker: "Frage 5", title: "Wofür ich hier bin", lines: ["Was gibt mir das Gefühl, dass ich für etwas Bestimmtes hier bin."] },
+      { kicker: "Teil 2", title: "Den Traum konkretisieren", lines: ["Vage Ziele erreichst du nicht.", "Dein Gehirn braucht ein präzises Bild."] },
+      { kicker: "Frage 6", title: "Was genau", lines: ["Was will ich erreichen.", "Nicht vage. So präzise, dass ich es jetzt aufzeichnen könnte."] },
+      { kicker: "Frage 7", title: "Idealer Alltag", lines: ["Wohnen. Arbeit. Menschen um mich. Freiheit."] },
+      { kicker: "Frage 8", title: "Morgen möglich", lines: ["Wenn ich es mir morgen leisten könnte:", "Was wäre das Erste, das ich kaufe, tue oder verändere."] },
+      { kicker: "Frage 9", title: "Die Zahl", lines: ["Welche Zahl auf meinem Konto würde mein Leben wirklich verändern."] },
+      { kicker: "Teil 3", title: "Den Preis kennen", lines: ["Niemand wird zufällig reich.", "Niemand baut zufällig einen großen Körper.", "Es braucht Obsession. Für eine gewisse Zeit."] },
+      { kicker: "Frage 10", title: "Was ich gebe", lines: ["Zeit. Komfort. Soziale Anerkennung."] },
+      { kicker: "Frage 11", title: "Disziplin", lines: ["Wie diszipliniert kann ich werden.", "Kann ich 8 Stunden am Tag fokussiert an einer Sache arbeiten."] },
+      { kicker: "Frage 12", title: "Ablenkung", lines: ["Welche Ablenkungen halte ich gerade in meinem Leben, die mich aufhalten."] },
+      { kicker: "Frage 13", title: "Tempo", lines: ["Handle ich gerade so schnell wie möglich.", "Oder erlaube ich mir Trägheit."] },
+      { kicker: "Teil 4", title: "Wachstum prüfen", lines: ["Setze ich wirklich große Ziele."] },
+      { kicker: "Frage 14", title: "Echte Angst", lines: ["Setze ich Ziele, bei denen ich echte Angst vor dem Scheitern habe."] },
+      { kicker: "Frage 15", title: "Sichere Ziele", lines: ["Oder setze ich nur sichere Ziele, die ich ohnehin erreiche."] },
+      { kicker: "Frage 16", title: "Heute konkret", lines: ["Was mache ich heute, das mich meinem Ziel näherbringt."] },
+      { kicker: "Frage 17", title: "Fremder Blick", lines: ["Würde jemand, der mich beobachtet, sagen, dass mein Verhalten zu meinen Zielen passt."] },
+      { kicker: "Ritual", title: "Drei Schritte", lines: ["Aufschreiben. Visualisieren. Schnell handeln."] },
+      { kicker: "Schritt 1", title: "Aufschreiben", lines: ["Einmalig schreiben. Dann täglich lesen.", "Auf einem Blatt Papier."] },
+      { kicker: "Schritt 1", title: "Im Präsens", lines: ["Was genau du willst: Ich bin. Ich habe. Ich verdiene.", "Und was du dafür zu geben bereit bist."] },
+      { kicker: "Schritt 1", title: "Laut vorlesen", lines: ["Beides mindestens einmal täglich laut. Morgens und abends."] },
+      { kicker: "Schritt 2", title: "Visualisieren", lines: ["5 bis 10 Minuten täglich.", "Setz dich hin. Entspanne dich vollständig."] },
+      { kicker: "Schritt 2", title: "Jetzt, nicht irgendwann", lines: ["Du lebst bereits dein Ziel. Nicht später. Jetzt."] },
+      { kicker: "Schritt 2", title: "Alle Sinne", lines: ["Wie fühlt es sich an.", "Was siehst du.", "Was hörst du."] },
+      { kicker: "Schritt 2", title: "Emotion", lines: ["Je mehr du dabei fühlst, desto besser."] },
+      { kicker: "Schritt 3", title: "Handle schnell", lines: ["Der Unterschied ist nicht Intelligenz.", "Es ist Geschwindigkeit."] },
+      { kicker: "Schritt 3", title: "Jeden Tag", lines: ["Erledige die Dinge, die dich deinem Ziel näherbringen."] },
+      { kicker: "Schritt 3", title: "Während andere überlegen", lines: ["Hast du bereits angefangen."] },
+      { kicker: "Schritt 3", title: "Recalculating", lines: ["Fehler sind Umwege. Keine Endstationen.", "Recalculating."] },
+      { kicker: "Tempo", title: "Das Konto lügt nicht", lines: ["Dein Bankkonto ist ein Spiegel deiner Geschwindigkeit.", "Wer schnell handelt, während andere noch im Komitee diskutieren, gewinnt."] },
+      { kicker: "Kernprinzip", title: "In einem Satz", lines: ["Schreib auf, was du willst. Im Präsens, als wäre es bereits wahr.", "Lies es täglich.", "Handle schnell.", "Und sei bereit, dafür als verrückt zu gelten."] },
+      { title: "Aim for the moon", lines: ["Even if you miss, you'll land among the stars."] },
+      { title: "Morgen wieder", lines: ["Das war alles.", "Links zurück. Rechts von vorn."] }
+    ];
+
+    let i = 0;
+    const last = slides.length - 1;
+    const $kicker = document.getElementById("kicker");
+    const $title = document.getElementById("title");
+    const $body = document.getElementById("body");
+    const $count = document.getElementById("count");
+    const $hint = document.getElementById("hint");
+    const $fill = document.getElementById("fill");
+
+    function render() {
+      const s = slides[i];
+      $kicker.textContent = s.kicker || "";
+      $kicker.style.display = s.kicker ? "block" : "none";
+      $title.textContent = s.title;
+      $body.innerHTML = "";
+      s.lines.forEach((line) => {
+        const p = document.createElement("p");
+        p.textContent = line;
+        $body.appendChild(p);
+      });
+      $count.textContent = (i + 1) + " / " + slides.length;
+      $hint.textContent = i === last ? "rechts von vorn" : "rechts weiter";
+      $fill.style.width = ((i + 1) / slides.length * 100) + "%";
+    }
+
+    function go(d) {
+      if (d > 0 && i >= last) i = 0;
+      else i = Math.min(last, Math.max(0, i + d));
+      render();
+    }
+
+    let start = null;
+    const app = document.getElementById("app");
+    app.addEventListener("pointerdown", (e) => { start = { x: e.clientX, y: e.clientY }; });
+    app.addEventListener("pointerup", (e) => {
+      if (!start) return;
+      const dx = e.clientX - start.x;
+      const dy = e.clientY - start.y;
+      start = null;
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+        go(dx < 0 ? 1 : -1);
+        return;
+      }
+      go(e.clientX >= window.innerWidth / 2 ? 1 : -1);
+    });
+    app.addEventListener("pointercancel", () => { start = null; });
+
+    window.addEventListener("keydown", (e) => {
+      if (["ArrowRight", " ", "Enter"].includes(e.key)) { e.preventDefault(); go(1); }
+      else if (e.key === "ArrowLeft" || e.key === "Backspace") { e.preventDefault(); go(-1); }
+      else if (e.key === "Home") { e.preventDefault(); i = 0; render(); }
+    });
+
+    render();
+  </script>
+</body>
+</html>

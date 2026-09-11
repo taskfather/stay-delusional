@@ -7,7 +7,8 @@ GitHub Pages for the public site. Live at `https://taskfather.github.io/stay-del
 - `/` landing
 - `/privacy/` App Store privacy policy URL
 - `/terms/` terms of use
-- `/support/` App Store support URL
+- `/imprint/` Austrian legal notice (ECG)
+- `/support/` App Store support URL (`office@taskfather.ai`)
 
 ## Keep private / machine
 

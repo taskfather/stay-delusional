@@ -247,6 +247,13 @@ a:hover { color: var(--fg); }
 
 .legal a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
 
+.legal address {
+  font-style: normal;
+  color: #cfcfcf;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
 @media (max-width: 800px) {
   .nav-links { gap: 18px; font-size: 12px; }
   .grid { grid-template-columns: 1fr; }

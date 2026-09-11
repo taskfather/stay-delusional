@@ -1,26 +1,32 @@
 # Stay Delusional — web
 
-GitHub Pages for `https://staydelusional.com`.
+GitHub Pages for the public site. Live at `https://taskfather.github.io/stay-delusional/`.
 
-## URLs
+## Public
 
-- Guides: `/` (the original pages)
-- Catalog: `/content/v1/catalog.json`
-- Metrics: `/dashboard/` (password gate, for you only)
-- Telemetry POST: `/content/v1/telemetry` (needs Cloudflare Pages + `GITHUB_TOKEN`, or the GitHub Action dispatch)
+- `/` landing
+- `/privacy/` App Store privacy policy URL
+- `/terms/` terms of use
+- `/support/` App Store support URL
+
+## Keep private / machine
+
+- Guides catalog: `/content/v1/catalog.json` (the iOS app fetches this)
+- Metrics: `/dashboard/` (password gate, for you only — not linked from the landing page)
+- Telemetry POST on this host still cannot work (GitHub Pages). The app uses Supabase.
 
 ## Domain
 
-In the repo: GitHub Pages is on. Point DNS:
+Point DNS when ready:
 
 - `A` `@` → `185.199.108.153` `185.199.109.153` `185.199.110.153` `185.199.111.153`
 - `AAAA` `@` → `2606:50c0:8000::153` `2606:50c0:8001::153` `2606:50c0:8002::153` `2606:50c0:8003::153`
 - `CNAME` `www` → `taskfather.github.io`
 
-Until DNS is live, the same files are at `https://taskfather.github.io/stay-delusional/`.
+Do not add a `CNAME` file in this repo until DNS already points here.
 
-## Live metrics
+## App Store Connect (after the paid developer account)
 
-The dashboard at `/dashboard/` is gated. It is for you, not for app users. The page is still on public Pages, so the password is a gate, not server auth.
-
-GitHub Pages still cannot receive POST. `staydelusional.com` is not usable until DNS points at GitHub and the cert is `staydelusional.com` (it currently serves `*.one.com`).
+- Privacy Policy URL: `https://taskfather.github.io/stay-delusional/privacy/`
+- Support URL: `https://taskfather.github.io/stay-delusional/support/`
+- Marketing URL: `https://taskfather.github.io/stay-delusional/`

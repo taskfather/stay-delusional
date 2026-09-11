@@ -4,219 +4,77 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="apple-mobile-web-app-title" content="Delusional" />
   <title>Stay Delusional</title>
-  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="description" content="A daily identity ritual for iPhone. Read. Write. Keep the streak. The house only goes up if you do." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Stay Delusional" />
+  <meta property="og:description" content="A daily identity ritual for iPhone." />
+  <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" />
-  <style>
-    :root { color-scheme: dark; }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      height: 100%;
-      height: 100dvh;
-      overflow: hidden;
-      overscroll-behavior: none;
-      background: #000;
-      color: #fff;
-      font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      touch-action: manipulation;
-    }
-    #app {
-      position: fixed;
-      inset: 0;
-      cursor: pointer;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-    .bar {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: #1a1a1a;
-    }
-    .fill { height: 100%; background: #fff; width: 0; }
-    .card {
-      height: 100%;
-      max-width: 36rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: max(4.5rem, env(safe-area-inset-top)) 1.5rem max(5rem, env(safe-area-inset-bottom));
-    }
-    .kicker {
-      margin: 0 0 0.75rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #888;
-      font-weight: 500;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(1.75rem, 6.5vw, 2.75rem);
-      font-weight: 560;
-      letter-spacing: -0.035em;
-      line-height: 1.12;
-    }
-    .body { margin-top: 1.35rem; display: flex; flex-direction: column; gap: 0.7rem; }
-    .body p {
-      margin: 0;
-      font-size: clamp(1.02rem, 3.4vw, 1.2rem);
-      line-height: 1.45;
-      color: #ececec;
-    }
-    footer {
-      position: absolute;
-      left: 1.25rem;
-      right: 1.25rem;
-      bottom: max(1.1rem, env(safe-area-inset-bottom));
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #666;
-      pointer-events: none;
-    }
-    footer .hint { color: #888; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="app">
-    <div class="bar"><div class="fill" id="fill"></div></div>
-    <article class="card">
-      <p class="kicker" id="kicker"></p>
-      <h1 id="title"></h1>
-      <div class="body" id="body"></div>
-    </article>
-    <footer>
-      <span id="count"></span>
-      <span class="hint" id="hint"></span>
-    </footer>
-  </div>
-  <script>
-    const slides = [
-      { title: "Stay delusional", lines: ["Your daily mindset guide for goals that look impossible.", "One page. Then the next."] },
-      { kicker: "The rule", title: "Success starts in the mind", lines: ["You have to see yourself as successful first.", "If you cannot picture it, you will not become it."] },
-      { kicker: "The rule", title: "Four levers", lines: ["See it.", "Say it.", "Risk it.", "Move fast."] },
-      { kicker: "The rule", title: "Delusional is the job", lines: ["It is not a weakness.", "It is the price of anything large."] },
-      { kicker: "The rule", title: "When it stops being crazy", lines: ["Delusion is only delusional when you fail to make it real."] },
-      { kicker: "Daily talk", title: "Repeat until it sticks", lines: ["A delusional mindset is built by repetition.", "Every day.", "It will sound ridiculous at first. That is the point."] },
-      { kicker: "Morning", title: "The second you wake", lines: ["Four sentences. Out loud.", "Before the day talks back."] },
-      { kicker: "Morning", title: "Say this", lines: ["Something extraordinary will happen to me today."] },
-      { kicker: "Morning", title: "Say this", lines: ["I am already the person I am becoming."] },
-      { kicker: "Morning", title: "Say this", lines: ["I already have my goal. It is only a matter of time."] },
-      { kicker: "Morning", title: "In the mirror", lines: ["I love you.", "I know where you are going."] },
-      { kicker: "Day", title: "While you work", lines: ["Five sentences.", "Especially when you stall."] },
-      { kicker: "Day", title: "Say this", lines: ["I pay for everything with my creativity, not my time."] },
-      { kicker: "Day", title: "Say this", lines: ["Speed is my advantage.", "I act while others are still thinking."] },
-      { kicker: "Day", title: "Say this", lines: ["My dreams are bigger than my fears."] },
-      { kicker: "Day", title: "Say this", lines: ["I am always in the right place at the right time."] },
-      { kicker: "Day", title: "Say this", lines: ["Money works for me."] },
-      { kicker: "Night", title: "Right before sleep", lines: ["Read your goals out loud in the present tense.", "The brain files it deeper as you fall asleep."] },
-      { kicker: "Night", title: "Say this", lines: ["Everything is lining up for me.", "Everything is turning toward my good."] },
-      { kicker: "Night", title: "Say this", lines: ["Only good comes from this situation.", "I am safe."] },
-      { kicker: "Night", title: "Present tense", lines: ["I am. I have. I earn.", "Say your goals as if they are already true."] },
-      { kicker: "Mind", title: "The brain cannot tell", lines: ["A vivid picture and a real event land the same way.", "To the brain, they are the same."] },
-      { kicker: "Questions", title: "Write on paper", lines: ["Do not type. Handwrite.", "The brain takes it more seriously."] },
-      { kicker: "Part 1", title: "Find the direction", lines: ["Who am I.", "Where am I going."] },
-      { kicker: "Question 1", title: "Who am I, really", lines: ["Strip out what other people expect."] },
-      { kicker: "Question 2", title: "Five to ten years", lines: ["Where do I want to stand."] },
-      { kicker: "Question 3", title: "If failure was impossible", lines: ["What would I do."] },
-      { kicker: "Question 4", title: "The laughable goal", lines: ["Which goal is so large that people laugh when I say it."] },
-      { kicker: "Question 5", title: "Why I am here", lines: ["What makes me feel I was put here for something specific."] },
-      { kicker: "Part 2", title: "Make the dream sharp", lines: ["Vague goals stay vague.", "The brain needs a precise picture."] },
-      { kicker: "Question 6", title: "Exactly what", lines: ["What do I want.", "So precise I could draw it now."] },
-      { kicker: "Question 7", title: "The ideal day", lines: ["Home. Work. People around me. Freedom."] },
-      { kicker: "Question 8", title: "If I could afford it tomorrow", lines: ["What is the first thing I buy, do, or change."] },
-      { kicker: "Question 9", title: "The number", lines: ["Which number in my account would actually change my life."] },
-      { kicker: "Part 3", title: "Know the price", lines: ["Nobody gets rich by accident.", "Nobody builds a body by accident.", "For a while, it takes obsession."] },
-      { kicker: "Question 10", title: "What I will give", lines: ["Time. Comfort. Social approval."] },
-      { kicker: "Question 11", title: "Discipline", lines: ["How disciplined can I become.", "Can I work eight focused hours on one thing."] },
-      { kicker: "Question 12", title: "Distraction", lines: ["What am I keeping in my life that is holding me back."] },
-      { kicker: "Question 13", title: "Speed", lines: ["Am I moving as fast as I can.", "Or am I letting myself drift."] },
-      { kicker: "Part 4", title: "Check the size", lines: ["Are my goals actually large."] },
-      { kicker: "Question 14", title: "Real fear", lines: ["Do my goals scare me with the thought of failing."] },
-      { kicker: "Question 15", title: "Safe goals", lines: ["Or am I only setting goals I would hit anyway."] },
-      { kicker: "Question 16", title: "Today", lines: ["What am I doing today that moves me closer."] },
-      { kicker: "Question 17", title: "If someone watched", lines: ["Would they say my behavior matches my goals."] },
-      { kicker: "Ritual", title: "Three steps", lines: ["Write it. See it. Move fast."] },
-      { kicker: "Step 1", title: "Write it once", lines: ["Then read it every day.", "On paper."] },
-      { kicker: "Step 1", title: "Present tense", lines: ["What I want: I am. I have. I earn.", "And what I am willing to give for it."] },
-      { kicker: "Step 1", title: "Out loud", lines: ["Read both at least once a day.", "Morning and night."] },
-      { kicker: "Step 2", title: "Visualize", lines: ["Five to ten minutes a day.", "Sit down. Drop the tension."] },
-      { kicker: "Step 2", title: "Now, not later", lines: ["I am already living the goal.", "Not someday. Now."] },
-      { kicker: "Step 2", title: "All senses", lines: ["How does it feel.", "What do I see.", "What do I hear."] },
-      { kicker: "Step 2", title: "Feel it", lines: ["The more emotion I can hold, the better."] },
-      { kicker: "Step 3", title: "Move fast", lines: ["The gap is not intelligence.", "It is speed."] },
-      { kicker: "Step 3", title: "Every day", lines: ["Do the work that moves the goal."] },
-      { kicker: "Step 3", title: "While others think", lines: ["I have already started."] },
-      { kicker: "Step 3", title: "Recalculating", lines: ["Mistakes are detours. Not endings.", "Recalculating."] },
-      { kicker: "Speed", title: "The account does not lie", lines: ["Your bank account mirrors your speed.", "Whoever acts while the committee is still talking, wins."] },
-      { kicker: "Core", title: "One sentence", lines: ["Write what you want as if it is already true.", "Read it daily.", "Move fast.", "Be willing to look crazy."] },
-      { title: "Aim for the moon", lines: ["Even if you miss, you will land among the stars."] },
-      { title: "Again tomorrow", lines: ["That is the whole guide.", "Left goes back. Right starts over."] }
-    ];
+  <header class="nav">
+    <a class="brand" href="./">
+      <svg class="mark" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="9.5" fill="#fff"/>
+        <circle cx="11" cy="11" r="2.7" fill="#000"/>
+      </svg>
+      STAYDL
+    </a>
+    <nav class="nav-links">
+      <a href="privacy/">Privacy</a>
+      <a href="support/">Support</a>
+    </nav>
+  </header>
 
-    let i = 0;
-    const last = slides.length - 1;
-    const $kicker = document.getElementById("kicker");
-    const $title = document.getElementById("title");
-    const $body = document.getElementById("body");
-    const $count = document.getElementById("count");
-    const $hint = document.getElementById("hint");
-    const $fill = document.getElementById("fill");
+  <main>
+    <section class="hero wrap">
+      <h1>Stay delusional.</h1>
+      <p class="lead">A daily identity ritual for iPhone. Ten slides. One line in the journal. Midnight is the cut.</p>
+      <p class="sub">Not a feed. Not a game. Not therapy. If you miss the day, the house comes down.</p>
+      <div class="cta">
+        <span class="pill"><span class="dot"></span> Coming to iPhone</span>
+        <span class="cta-note">Free to start. No account.</span>
+      </div>
+    </section>
 
-    function render() {
-      const s = slides[i];
-      $kicker.textContent = s.kicker || "";
-      $kicker.style.display = s.kicker ? "block" : "none";
-      $title.textContent = s.title;
-      $body.innerHTML = "";
-      s.lines.forEach((line) => {
-        const p = document.createElement("p");
-        p.textContent = line;
-        $body.appendChild(p);
-      });
-      $count.textContent = (i + 1) + " / " + slides.length;
-      $hint.textContent = i === last ? "right to restart" : "tap right";
-      $fill.style.width = ((i + 1) / slides.length * 100) + "%";
-    }
+    <hr class="rule" />
 
-    function go(d) {
-      if (d > 0 && i >= last) i = 0;
-      else i = Math.min(last, Math.max(0, i + d));
-      render();
-    }
+    <section class="wrap grid">
+      <article class="cell">
+        <p class="num">01 · Read</p>
+        <h2>Ten slides.</h2>
+        <p>One sitting. Same hour every day. Then you write.</p>
+      </article>
+      <article class="cell">
+        <p class="num">02 · Write</p>
+        <h2>One line.</h2>
+        <p>The journal closes the day. Empty does not count.</p>
+      </article>
+      <article class="cell">
+        <p class="num">03 · Stay</p>
+        <h2>The house.</h2>
+        <p>It only goes up if you show up. Streak dies at midnight.</p>
+      </article>
+    </section>
 
-    let start = null;
-    const app = document.getElementById("app");
-    app.addEventListener("pointerdown", (e) => { start = { x: e.clientX, y: e.clientY }; });
-    app.addEventListener("pointerup", (e) => {
-      if (!start) return;
-      const dx = e.clientX - start.x;
-      const dy = e.clientY - start.y;
-      start = null;
-      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
-        go(dx < 0 ? 1 : -1);
-        return;
-      }
-      go(e.clientX >= window.innerWidth / 2 ? 1 : -1);
-    });
-    app.addEventListener("pointercancel", () => { start = null; });
+    <hr class="rule" />
 
-    window.addEventListener("keydown", (e) => {
-      if (["ArrowRight", " ", "Enter"].includes(e.key)) { e.preventDefault(); go(1); }
-      else if (e.key === "ArrowLeft" || e.key === "Backspace") { e.preventDefault(); go(-1); }
-      else if (e.key === "Home") { e.preventDefault(); i = 0; render(); }
-    });
+    <section class="wrap aside">
+      <p>Stay Delusional is a personal ritual. It is not medical, psychological, or financial advice. Your journal stays on your device. We do not read it.</p>
+    </section>
+  </main>
 
-    render();
-  </script>
+  <hr class="rule" />
+
+  <footer class="wrap site-foot">
+    <span>© 2026 Stay Delusional</span>
+    <nav>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="support/">Support</a>
+    </nav>
+  </footer>
 </body>
 </html>

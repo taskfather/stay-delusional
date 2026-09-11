@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>STAYDL · Metrics</title>
+  <meta name="robots" content="noindex, nofollow" />
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
@@ -12,8 +13,8 @@
       background: #000;
       color: #fff;
       font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      padding: 28px 24px 48px;
+      -webkit-font-smoothing: antidiased;
+      padding: 28px 24px 64px;
     }
     h1 {
       font-size: 13px;
@@ -28,7 +29,7 @@
       gap: 16px;
       margin-bottom: 36px;
     }
-    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     .stat .k {
       font-size: 11px;
       letter-spacing: 0.18em;
@@ -52,82 +53,318 @@
     }
     td { padding: 10px 8px; border-bottom: 1px solid #141414; }
     .mute { color: #888; }
+    .bad { color: #c9c9c9; }
     h2 {
       font-size: 11px;
       letter-spacing: 0.18em;
       color: #666;
       font-weight: 500;
-      margin: 32px 0 8px;
+      margin: 36px 0 10px;
     }
     .empty { color: #555; padding: 24px 0; }
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+    }
+    .bar .label { width: 140px; font-size: 13px; }
+    .bar .track {
+      flex: 1;
+      height: 8px;
+      background: #141414;
+      position: relative;
+    }
+    .bar .fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      background: #fff;
+    }
+    .bar .n { width: 110px; text-align: right; font-size: 13px; color: #888; }
+    .slides { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; margin-top: 8px; }
+    .slide {
+      text-align: center;
+    }
+    .slide .col {
+      height: 88px;
+      background: #141414;
+      display: flex;
+      align-items: flex-end;
+    }
+    .slide .col > i {
+      display: block;
+      width: 100%;
+      background: #fff;
+    }
+    .slide .k { font-size: 11px; color: #666; margin-top: 6px; letter-spacing: 0.08em; }
+    .note { font-size: 12px; color: #555; margin-top: 8px; max-width: 640px; line-height: 1.45; }
+    #gate {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+    #gate[hidden] { display: none; }
+    #gate form {
+      width: min(320px, calc(100vw - 48px));
+    }
+    #gate .mark {
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    #gate input {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      border-bottom: 1.5px solid #fff;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 10px 0 12px;
+      outline: none;
+    }
+    #gate button {
+      margin-top: 28px;
+      width: 100%;
+      border: 0;
+      border-radius: 999px;
+      background: #fff;
+      color: #000;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 16px 0;
+      cursor: pointer;
+    }
+    #gate .err { color: #666; font-size: 13px; min-height: 20px; margin-top: 14px; }
+    #app[hidden] { display: none; }
   </style>
 </head>
 <body>
-  <h1>STAYDL / GUIDES</h1>
+  <div id="gate">
+    <form id="gateForm" autocomplete="off">
+      <div class="mark">STAYDL</div>
+      <input id="gatePass" type="password" autofocus />
+      <div class="err" id="gateErr"></div>
+      <button type="submit">Enter</button>
+    </form>
+  </div>
+  <div id="app" hidden>
+  <h1>STAYDL / LIVE</h1>
   <div class="grid">
-    <div class="stat"><div class="k">READS</div><div class="v" id="events">—</div></div>
-    <div class="stat"><div class="k">FINISHED</div><div class="v" id="rate">—</div></div>
-    <div class="stat"><div class="k">DROPPED</div><div class="v" id="dropped">—</div></div>
+    <div class="stat"><div class="k">INSTALLS</div><div class="v" id="installs">—</div></div>
+    <div class="stat"><div class="k">OPENS</div><div class="v" id="opens">—</div></div>
+    <div class="stat"><div class="k">DAY DONE</div><div class="v" id="days">—</div></div>
+    <div class="stat"><div class="k">STUCK</div><div class="v" id="stuck">—</div></div>
+  </div>
+  <div class="grid">
+    <div class="stat"><div class="k">GUIDE FINISH</div><div class="v" id="guideRate">—</div></div>
+    <div class="stat"><div class="k">JOURNAL FINISH</div><div class="v" id="journalRate">—</div></div>
+    <div class="stat"><div class="k">STREAK LOST</div><div class="v" id="lost">—</div></div>
     <div class="stat"><div class="k">UPDATED</div><div class="v" id="when" style="font-size:18px;padding-top:10px">—</div></div>
   </div>
+
+  <h2>FUNNEL · UNIQUE INSTALLS</h2>
+  <div id="funnel"></div>
+  <p class="note">Where people stop: the first step that drops hard is the leak. Open → name → onboard → briefing → first guide → write → day done.</p>
+
+  <h2>GUIDE DROP BY SLIDE</h2>
+  <div class="slides" id="slides"></div>
+  <p class="note">People who quit a daily guide, by last slide they saw. Slide 9 is the write prompt. If 0–1 is high, the open is weak. If 8–9 is high, they read and still did not finish.</p>
+
   <h2>VARIANTS</h2>
-  <table id="variants"><thead><tr><th>PACK</th><th>VAR</th><th>N</th><th>DONE</th><th>AVG SLIDE</th></tr></thead><tbody></tbody></table>
+  <table id="variants"><thead><tr><th>PACK</th><th>VAR</th><th>START</th><th>DONE</th><th>DROP</th><th>AVG</th></tr></thead><tbody></tbody></table>
+
   <h2>RECENT</h2>
-  <table id="recent"><thead><tr><th>PACK</th><th>VAR</th><th>DONE</th><th>DWELL</th><th>WHEN</th></tr></thead><tbody></tbody></table>
-  <p class="empty" id="empty" hidden>No events yet. The app sends them when a phone is online.</p>
+  <table id="recent"><thead><tr><th>EVENT</th><th>PACK</th><th>VAR</th><th>SLIDE</th><th>WHEN</th></tr></thead><tbody></tbody></table>
+  <p class="empty" id="empty">No events yet.</p>
+  </div>
+
   <script>
-    const urls = [
+    const SUPABASE = "https://fkmsbturyxgnexdjeqde.supabase.co/rest/v1/staydl_events?select=*&order=created_at.desc&limit=4000";
+    const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZrbXNidHVyeXhnbmV4ZGplcWRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwNzA0NTIsImV4cCI6MjA5MDY0NjQ1Mn0.NNNeVUObXpjuy_mKmAMRq5I5Mnqc8nZHNXPhu3zMfyo";
+    const FALLBACKS = [
       "../content/v1/metrics.json",
-      "/content/v1/metrics.json",
-      "https://staydelusional.com/content/v1/metrics.json",
       "https://taskfather.github.io/stay-delusional/content/v1/metrics.json",
     ];
-    function ms(n) {
-      if (!n && n !== 0) return "—";
-      if (n < 1000) return Math.round(n) + "ms";
-      return (n / 1000).toFixed(1) + "s";
-    }
+    const FUNNEL = [
+      ["open", "Open"],
+      ["onboard_start", "Onboard start"],
+      ["onboard_name", "Name"],
+      ["onboard_done", "Onboard done"],
+      ["briefing_done", "Briefing done"],
+      ["guide_done", "Guide done"],
+      ["journal_done", "Write done"],
+      ["day_done", "Day done"],
+    ];
+
     function pct(a, b) {
       if (!b) return "—";
       return Math.round((a / b) * 100) + "%";
     }
-    async function load() {
-      let data = null;
-      for (const u of urls) {
-        try {
-          const r = await fetch(u, { cache: "no-store" });
-          if (r.ok) { data = await r.json(); break; }
-        } catch (e) {}
+    function ms(n) {
+      if (n == null) return "—";
+      if (n < 1000) return Math.round(n) + "ms";
+      return (n / 1000).toFixed(1) + "s";
+    }
+    function uniq(rows, name) {
+      const set = new Set();
+      for (const r of rows) {
+        if (r.name === name && r.install) set.add(r.install);
       }
-      if (!data) return;
-      document.getElementById("events").textContent = data.events || 0;
-      document.getElementById("dropped").textContent = data.dropped || 0;
-      document.getElementById("rate").textContent = pct(data.completed || 0, data.events || 0);
-      document.getElementById("when").textContent = data.updatedAt
-        ? new Date(data.updatedAt).toLocaleString()
-        : "—";
+      return set.size;
+    }
+    function count(rows, name) {
+      return rows.filter((r) => r.name === name).length;
+    }
+
+    function render(rows) {
+      const empty = document.getElementById("empty");
+      if (!rows.length) {
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+      const installs = new Set(rows.map((r) => r.install).filter(Boolean)).size;
+      document.getElementById("installs").textContent = installs;
+      document.getElementById("opens").textContent = count(rows, "open");
+      document.getElementById("days").textContent = count(rows, "day_done");
+      const guideStart = count(rows, "guide_start");
+      const guideDone = count(rows, "guide_done");
+      const guideDrop = count(rows, "guide_drop");
+      const journalStart = count(rows, "journal_start");
+      const journalDone = count(rows, "journal_done");
+      const stuckGuide = guideStart - guideDone;
+      const stuckJournal = Math.max(0, journalStart - journalDone);
+      document.getElementById("stuck").textContent = stuckGuide + stuckJournal;
+      document.getElementById("guideRate").textContent = pct(guideDone, guideStart);
+      document.getElementById("journalRate").textContent = pct(journalDone, journalStart);
+      document.getElementById("lost").textContent = count(rows, "streak_lost");
+      const latest = rows[0]?.created_at;
+      document.getElementById("when").textContent = latest ? new Date(latest).toLocaleString() : "—";
+
+      const funnelMax = Math.max(1, ...FUNNEL.map(([n]) => uniq(rows, n)));
+      document.getElementById("funnel").innerHTML = FUNNEL.map(([name, label], i) => {
+        const n = uniq(rows, name);
+        const prev = i === 0 ? n : uniq(rows, FUNNEL[i - 1][0]);
+        const conv = i === 0 ? "" : " · " + pct(n, prev) + " from last";
+        return `<div class="bar">
+          <div class="label">${label}</div>
+          <div class="track"><div class="fill" style="width:${Math.round((n / funnelMax) * 100)}%"></div></div>
+          <div class="n">${n}${conv}</div>
+        </div>`;
+      }).join("");
+
+      const drops = Array(10).fill(0);
+      for (const r of rows) {
+        if (r.name !== "guide_drop") continue;
+        const i = Math.max(0, Math.min(9, r.dropped_at ?? r.step ?? 0));
+        drops[i] += 1;
+      }
+      const dropMax = Math.max(1, ...drops);
+      document.getElementById("slides").innerHTML = drops.map((n, i) => `
+        <div class="slide">
+          <div class="col"><i style="height:${Math.round((n / dropMax) * 100)}%"></i></div>
+          <div class="k">${i + 1}<br>${n}</div>
+        </div>
+      `).join("");
+
+      const variants = {};
+      for (const r of rows) {
+        if (!r.pack || (r.name !== "guide_start" && r.name !== "guide_done" && r.name !== "guide_drop")) continue;
+        const key = r.pack + ":" + (r.variant || "a");
+        const row = variants[key] || (variants[key] = { pack: r.pack, variant: r.variant || "a", start: 0, done: 0, drop: 0, ms: [] });
+        if (r.name === "guide_start") row.start += 1;
+        if (r.name === "guide_done") { row.done += 1; if (r.ms) row.ms.push(r.ms); }
+        if (r.name === "guide_drop") row.drop += 1;
+      }
       const vbody = document.querySelector("#variants tbody");
-      const rows = Object.values(data.variants || {});
-      vbody.innerHTML = rows.map((v) => `<tr>
-        <td>${v.pack || ""}</td>
-        <td>${v.variant || ""}</td>
-        <td>${v.n || 0}</td>
-        <td>${pct(v.completed || 0, v.n || 0)}</td>
-        <td class="mute">${ms(v.avgSlideMs)}</td>
+      const vrows = Object.values(variants).sort((a, b) => b.start - a.start);
+      vbody.innerHTML = vrows.map((v) => `<tr>
+        <td>${v.pack}</td>
+        <td>${v.variant}</td>
+        <td>${v.start}</td>
+        <td>${pct(v.done, v.start)}</td>
+        <td class="bad">${v.drop}</td>
+        <td class="mute">${ms(v.ms.length ? v.ms.reduce((a, b) => a + b, 0) / v.ms.length : null)}</td>
       </tr>`).join("") || "";
+
       const rbody = document.querySelector("#recent tbody");
-      const recent = data.recent || [];
-      rbody.innerHTML = recent.map((e) => `<tr>
+      rbody.innerHTML = rows.slice(0, 24).map((e) => `<tr>
+        <td>${e.name || ""}</td>
         <td>${e.pack || ""}</td>
         <td>${e.variant || ""}</td>
-        <td>${e.completed ? "yes" : "no"}</td>
-        <td class="mute">${ms((e.slideMs || []).reduce((a, b) => a + b, 0))}</td>
-        <td class="mute">${e.endedAt ? new Date(e.endedAt).toLocaleString() : ""}</td>
+        <td class="mute">${e.dropped_at != null ? e.dropped_at + 1 : (e.step != null ? e.step + 1 : "")}</td>
+        <td class="mute">${e.created_at ? new Date(e.created_at).toLocaleString() : ""}</td>
       </tr>`).join("");
-      document.getElementById("empty").hidden = (data.events || 0) > 0 || rows.length > 0;
     }
-    load();
-    setInterval(load, 60000);
+
+    async function load() {
+      try {
+        const r = await fetch(SUPABASE, {
+          headers: { apikey: KEY, Authorization: "Bearer " + KEY },
+          cache: "no-store",
+        });
+        if (r.ok) {
+          render(await r.json());
+          return;
+        }
+      } catch (e) {}
+      for (const u of FALLBACKS) {
+        try {
+          const r = await fetch(u, { cache: "no-store" });
+          if (!r.ok) continue;
+          const data = await r.json();
+          const rows = (data.recent || []).map((e) => ({
+            name: e.completed ? "guide_done" : "guide_drop",
+            pack: e.pack,
+            variant: e.variant,
+            created_at: e.endedAt,
+            dropped_at: e.droppedAt,
+            slide_ms: e.slideMs,
+          }));
+          render(rows);
+          document.getElementById("opens").textContent = data.events || 0;
+          document.getElementById("guideRate").textContent = pct(data.completed || 0, data.events || 0);
+          return;
+        } catch (e) {}
+      }
+    }
+    function boot() {
+      if (window.__staydlBoot) return;
+      window.__staydlBoot = true;
+      load();
+      setInterval(load, 30000);
+    }
+
+  const GATE = "1aadcb76733000c9c85b52c63b732ef84b8038dab6fe81134ff9edbb021f5003";
+  async function digest(text) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+  function unlock() {
+    document.getElementById("gate").hidden = true;
+    document.getElementById("app").hidden = false;
+    boot();
+  }
+  if (sessionStorage.getItem("staydl-gate") === GATE) unlock();
+  document.getElementById("gateForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const pass = document.getElementById("gatePass").value;
+    const err = document.getElementById("gateErr");
+    if ((await digest(pass)) === GATE) {
+      sessionStorage.setItem("staydl-gate", GATE);
+      err.textContent = "";
+      unlock();
+    } else {
+      err.textContent = "Wrong.";
+      document.getElementById("gatePass").value = "";
+    }
+  });
   </script>
 </body>
 </html>

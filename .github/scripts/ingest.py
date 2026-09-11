@@ -36,28 +36,46 @@ for ln in lines:
     except json.JSONDecodeError:
         pass
 
+
+def name_of(event):
+    if event.get("name"):
+        return event["name"]
+    if "completed" in event or event.get("pack"):
+        return "guide_done" if event.get("completed") else "guide_drop"
+    return ""
+
+
 variants = {}
 completed = 0
 dropped = 0
+named = 0
 for event in all_events:
-    key = f"{event.get('pack', '')}:{event.get('variant', '')}"
+    n = name_of(event)
+    if n:
+        named += 1
+    pack = event.get("pack") or ""
+    variant = event.get("variant") or ""
+    key = f"{pack}:{variant}"
     row = variants.setdefault(key, {
-        "pack": event.get("pack", ""),
-        "variant": event.get("variant", ""),
+        "pack": pack,
+        "variant": variant,
         "n": 0,
         "completed": 0,
         "slideMs": [],
     })
-    row["n"] += 1
-    if event.get("completed"):
-        row["completed"] += 1
-        completed += 1
-    else:
-        dropped += 1
-    row["slideMs"].extend(event.get("slideMs") or [])
+    if n in ("guide_start", "guide_done", "guide_drop") or (not event.get("name") and pack):
+        row["n"] += 1
+        if n == "guide_done" or event.get("completed"):
+            row["completed"] += 1
+            completed += 1
+        if n == "guide_drop" or (event.get("completed") is False):
+            dropped += 1
+        row["slideMs"].extend(event.get("slide_ms") or event.get("slideMs") or [])
 
 out_variants = {}
 for key, row in variants.items():
+    if not row["pack"]:
+        continue
     slides = row["slideMs"]
     out_variants[key] = {
         "pack": row["pack"],
@@ -69,18 +87,20 @@ for key, row in variants.items():
 
 summary = {
     "updatedAt": datetime.now(timezone.utc).isoformat(),
-    "events": len(all_events),
+    "events": named or len(all_events),
     "completed": completed,
     "dropped": dropped,
-    "completeRate": (completed / len(all_events)) if all_events else 0,
+    "completeRate": (completed / (completed + dropped)) if (completed + dropped) else 0,
     "variants": out_variants,
     "recent": [
         {
+            "name": name_of(e),
             "pack": e.get("pack"),
             "variant": e.get("variant"),
             "completed": bool(e.get("completed")),
-            "slideMs": e.get("slideMs") or [],
-            "endedAt": e.get("endedAt"),
+            "slideMs": e.get("slide_ms") or e.get("slideMs") or [],
+            "endedAt": e.get("created_at") or e.get("endedAt"),
+            "droppedAt": e.get("dropped_at") if e.get("dropped_at") is not None else e.get("droppedAt"),
         }
         for e in all_events[-20:][::-1]
     ],

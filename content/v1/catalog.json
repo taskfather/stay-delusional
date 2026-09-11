@@ -1,115 +1,86 @@
 {
-  "revision": 3,
+  "revision": 7,
   "minBuild": 1,
   "packs": {
-    "delusion": [
-      {
-        "id": "da1",
-        "title": "You woke up in the same room.",
-        "lines": [
-          "Same number. Same joke that this is just a phase.",
-          "If this was actually your life, would you still be this angry about it?"
-        ],
-        "kicker": "The wound"
-      },
-      {
-        "id": "da2",
-        "title": "That anger is not confusion.",
-        "lines": [
-          "It is the part of you that refuses the small version.",
-          "People who accepted the small version sleep fine. You don't."
-        ],
-        "kicker": "Stay with it"
-      },
-      {
-        "id": "da3",
-        "title": "Who told you the picture is embarrassing?",
-        "lines": [
-          "Realistic sounds adult. It is often just fear with better manners.",
-          "It takes {{goal}} and cuts it until it fits a bad month."
-        ],
-        "kicker": "Question"
-      },
-      {
-        "id": "da4",
-        "title": "Success starts in the mind.",
-        "lines": [
-          "If you cannot picture it, you will not become it.",
-          "A delusional mindset is built by repetition. It will sound ridiculous at first. That is the point."
-        ],
-        "kicker": "The rule"
-      },
-      {
-        "id": "da5",
-        "title": "Delusional is the job.",
-        "lines": [
-          "It is not a weakness. It is the price of anything large.",
-          "It stops being crazy when you make it real."
-        ],
-        "kicker": "The cut"
-      },
-      {
-        "id": "da6",
-        "title": "Say it like a fact.",
-        "lines": [
-          "{{name}}I already have {{goal}}. It is only a matter of time.",
-          "Write that sentence. Then the day has a direction."
-        ],
-        "kicker": "Write"
-      }
-    ],
     "money": [
       {
         "id": "ma1",
-        "title": "That heavy feeling is not a verdict.",
+        "title": "The bills can sit on you all day.",
         "lines": [
-          "Waking up already tired. Going to bed with the same open bills.",
-          "It feels like the truth. It is only the weather."
-        ],
-        "kicker": "The wound"
+          "You already know this feeling. The unpaid ones. The ones you should have paid weeks ago. They follow you into the morning and they are still there when you try to sleep.",
+          "That weight is real, and it is still not a verdict on the rest of your life."
+        ]
       },
       {
         "id": "ma2",
-        "title": "Would a rich person still be this loud in your head?",
+        "title": "An empty account is loud. It is not forever.",
         "lines": [
-          "Empty accounts are loud. They are not forever.",
-          "Everyone who got out sat in a room like this first."
-        ],
-        "kicker": "Question"
+          "When the number will not move, your head will tell you this is just your life now.",
+          "That voice is the weather of a hard month. It is not a law, and it does not get to close the door."
+        ]
       },
       {
         "id": "ma3",
-        "title": "The ceiling is fake.",
+        "title": "People who got out sat in a room like this.",
         "lines": [
-          "The people with money were not born on a different planet.",
-          "They stayed with a number that looked insane from an empty account."
-        ],
-        "kicker": "The cut"
+          "Late rent. A number that would not move. A day that felt already lost before noon.",
+          "Then they stayed with the work long enough for the story to change."
+        ]
       },
       {
         "id": "ma4",
-        "title": "Do not trust the night.",
+        "title": "There is always a next move.",
         "lines": [
-          "11pm will tell you it is over. Morning will tell you the same lie in a different light.",
-          "Neither of them can see next month."
-        ],
-        "kicker": "Stay with it"
+          "You may not like it. Call. Sell. Cut. Ask. Ship the ugly version. A small way out is still a way out.",
+          "The trap is believing this feeling has no exit."
+        ]
       },
       {
         "id": "ma5",
-        "title": "There is always a next move.",
+        "title": "Everything you want is still allowed.",
         "lines": [
-          "{{name}}the trap is believing this feeling has no exit.",
-          "Call. Sell. Cut. Ask. Ship the ugly version."
-        ],
-        "kicker": "The rule"
+          "A bigger company, a clean account, a life your family can stand on — none of that is closed because this week is heavy.",
+          "If someone else is living it, it is possible. Slow, maybe. Closed, no."
+        ]
       },
       {
         "id": "ma6",
+        "title": "Harder and faster is how you leave this room.",
+        "lines": [
+          "Talent sitting still loses to someone who moves today.",
+          "Build more momentum before the night talks you into waiting."
+        ]
+      },
+      {
+        "id": "ma7",
+        "title": "Do not stop.",
+        "lines": [
+          "The people who make it are not the ones who felt ready. They are the ones who did not quit on the day the bills were screaming.",
+          "One more day of not stopping is how a company gets built."
+        ]
+      },
+      {
+        "id": "ma8",
+        "title": "Stay smart while you stay hard.",
+        "lines": [
+          "Working longer on the wrong thing is still stuck. Think, then move, then think again, and keep going.",
+          "You need both. A brain without motion is a meeting. Motion without a brain is noise."
+        ]
+      },
+      {
+        "id": "ma9",
+        "title": "This season will pass if you do not.",
+        "lines": [
+          "The pain is telling you to shrink. Your job is to keep the picture and keep working.",
+          "Up from here there is no ceiling except the one you agree to."
+        ]
+      },
+      {
+        "id": "ma10",
         "title": "Write the real number.",
         "lines": [
-          "Not the rent. The money you are actually going after.",
-          "Say it like it is allowed. Then the day has a direction."
+          "Not the rent you are scared of. The money you are actually going after.",
+          "Write it like it is allowed. Then this day has a direction."
         ],
         "kicker": "Write"
       }
@@ -119,44 +90,163 @@
         "id": "pa1",
         "title": "Stuck is a feeling. It is not a fact.",
         "lines": [
-          "Morning hits and everything looks closed. The job. The money. The version of you that never left.",
+          "Morning can make everything look closed — the money, the job, the version of you that never left.",
           "That picture is yesterday talking. It is not a law."
-        ],
-        "kicker": "The wound"
+        ]
       },
       {
         "id": "pa2",
         "title": "Someone already has your impossible.",
         "lines": [
-          "They eat. They sleep. They used to be exactly where you are.",
+          "The life you want is ordinary for somebody. They eat. They sleep. They used to be exactly where you are.",
           "If it exists, it is available. Slow, maybe. Closed, no."
-        ],
-        "kicker": "Stay with it"
+        ]
       },
       {
         "id": "pa3",
-        "title": "The limit is a sentence you keep repeating.",
+        "title": "You have been practicing I cannot.",
         "lines": [
-          "{{name}}you have been practicing I cannot until it felt like physics.",
-          "It is not physics. It is a habit."
-        ],
-        "kicker": "Question"
+          "Say it enough times and it starts to feel like physics.",
+          "It is not physics. It is a habit, and habits can be broken by what you do today."
+        ]
       },
       {
         "id": "pa4",
-        "title": "There is no top.",
+        "title": "A bad season is not a closed door.",
         "lines": [
-          "People treat the next level like a wall. There is no wall.",
-          "There is only the next thing you have not done yet. After that, another one."
-        ],
-        "kicker": "The cut"
+          "No money this month does not mean the company cannot exist. It means this month is hard.",
+          "Hard and impossible are not the same word."
+        ]
       },
       {
         "id": "pa5",
-        "title": "Act like the door is open.",
+        "title": "There is no top.",
         "lines": [
-          "Write what you would do this week if you already knew {{goal}} was possible.",
-          "Then treat that sentence as the plan, not the fantasy."
+          "People treat the next level like a wall. There is no wall. There is only the next thing you have not done yet, and then another one.",
+          "You are allowed to keep going."
+        ]
+      },
+      {
+        "id": "pa6",
+        "title": "Move as if the door is open.",
+        "lines": [
+          "Waiting until you feel sure is how years disappear.",
+          "Act like it is possible and the day starts to look like a plan instead of a wall."
+        ]
+      },
+      {
+        "id": "pa7",
+        "title": "Harder, faster, again.",
+        "lines": [
+          "The people who get there did not wait for a better mood. They built speed while they were still afraid.",
+          "More momentum today is how possible becomes real."
+        ]
+      },
+      {
+        "id": "pa8",
+        "title": "Stay with it long enough.",
+        "lines": [
+          "Most ideas do not fail because they were stupid. They fail because the person stopped in the hard stretch.",
+          "If you do not stop, the stretch ends."
+        ]
+      },
+      {
+        "id": "pa9",
+        "title": "You do not need permission.",
+        "lines": [
+          "The world will not send a letter that says you may begin.",
+          "Beginning is how you find out it was possible."
+        ]
+      },
+      {
+        "id": "pa10",
+        "title": "Write the open door.",
+        "lines": [
+          "What would you do this week if you already knew it was possible?",
+          "Write that as the plan, not as a wish. Then treat {{goal}} like the next obvious step."
+        ],
+        "kicker": "Write"
+      }
+    ],
+    "delusion": [
+      {
+        "id": "da1",
+        "title": "Realistic is how people stay put.",
+        "lines": [
+          "It sounds adult. A lot of the time it is just fear with better manners.",
+          "It takes the company in your head and cuts it until it fits a bad month."
+        ]
+      },
+      {
+        "id": "da2",
+        "title": "The picture is supposed to look too big.",
+        "lines": [
+          "If your future still looks reasonable, it is probably just your present with nicer weather.",
+          "You are allowed to want a life that current-you cannot explain yet."
+        ]
+      },
+      {
+        "id": "da3",
+        "title": "Stay with the ridiculous version.",
+        "lines": [
+          "The version of you that looks crazy from this room is the one that gets you out of it.",
+          "Hold that picture while the bills are still loud. That is the work."
+        ]
+      },
+      {
+        "id": "da4",
+        "title": "Delusion is not lying.",
+        "lines": [
+          "You can see the empty account and still refuse to shrink the company.",
+          "Problems are temporary. The picture you keep is not."
+        ]
+      },
+      {
+        "id": "da5",
+        "title": "A hard week does not get to resize the dream.",
+        "lines": [
+          "The night will try to negotiate. Let it talk. Do not let it edit.",
+          "Up from here there is no ceiling except the one you agree to."
+        ]
+      },
+      {
+        "id": "da6",
+        "title": "Every idea is allowed if you stay on it.",
+        "lines": [
+          "People will call it too much. They are measuring from their own tired week.",
+          "You measure from the life you are building, and you keep going."
+        ]
+      },
+      {
+        "id": "da7",
+        "title": "Work like the picture is already true.",
+        "lines": [
+          "Not as a pose. As a pace. Harder, faster, with more momentum than yesterday.",
+          "Belief without motion is a mood. Motion is how belief becomes a company."
+        ]
+      },
+      {
+        "id": "da8",
+        "title": "Do not get smart in the direction of smaller.",
+        "lines": [
+          "Clever reasons to wait are still waiting.",
+          "Use your head to find the next move, then be stubborn about taking it."
+        ]
+      },
+      {
+        "id": "da9",
+        "title": "Do not stop because it looks foolish today.",
+        "lines": [
+          "Foolish is often just early.",
+          "Stay early long enough and it starts to look obvious."
+        ]
+      },
+      {
+        "id": "da10",
+        "title": "Say the insane sentence.",
+        "lines": [
+          "Write the thing you are not supposed to want yet.",
+          "If it embarrasses you a little, you are close. Put it down anyway."
         ],
         "kicker": "Write"
       }
@@ -166,10 +256,9 @@
         "id": "wa1",
         "title": "The bad feeling means you still care.",
         "lines": [
-          "You wake up sick of being stuck. That is not proof you should stop.",
-          "That is proof this still matters."
-        ],
-        "kicker": "The wound"
+          "You wake up sick of being stuck. That is not proof you should stop. That is proof this still matters.",
+          "People who gave up sleep fine. You don't."
+        ]
       },
       {
         "id": "wa2",
@@ -177,31 +266,69 @@
         "lines": [
           "Without a why, the day is only invoices and fear.",
           "With a why, the same day is a season you are walking through."
-        ],
-        "kicker": "Stay with it"
+        ]
       },
       {
         "id": "wa3",
-        "title": "Is this for a life you refuse to return to?",
+        "title": "Your why is a life you refuse to return to.",
         "lines": [
-          "{{name}}it is not a quote on a wall. It is your family not being stuck. It is you not becoming small again."
-        ],
-        "kicker": "Question"
+          "It is not a quote on a wall. It is your family not being stuck. It is you not becoming small again.",
+          "Keep that in the room today."
+        ]
       },
       {
         "id": "wa4",
         "title": "You already know it.",
         "lines": [
-          "You do not need a new why. You need to stop burying the one you had at 1am.",
+          "You do not need a new why. You need to stop burying the one you had at 1am when you could not sleep.",
           "Bring it into the morning, while the feeling is still honest."
-        ],
-        "kicker": "The cut"
+        ]
       },
       {
         "id": "wa5",
+        "title": "This is how you stay.",
+        "lines": [
+          "The company gets built by people who remember, on the ugly days, why they started.",
+          "Not by people who wait to feel ready."
+        ]
+      },
+      {
+        "id": "wa6",
+        "title": "The pain is temporary. The reason does not have to be.",
+        "lines": [
+          "Bills pass. Seasons pass. The person you are doing this for is still there.",
+          "Work for them today, harder than the fear."
+        ]
+      },
+      {
+        "id": "wa7",
+        "title": "Move faster because it matters.",
+        "lines": [
+          "If the why is real, delay is a kind of betrayal.",
+          "Build momentum like someone is waiting on the other side of this stretch, because they are."
+        ]
+      },
+      {
+        "id": "wa8",
+        "title": "Stay intelligent about the why.",
+        "lines": [
+          "Do the work that actually serves it, not the work that only looks busy.",
+          "Caring is not enough. Caring plus a clear next step is enough for today."
+        ]
+      },
+      {
+        "id": "wa9",
+        "title": "Do not stop on the day it would be easiest.",
+        "lines": [
+          "That is the day that decides the story.",
+          "Stay. Then stay tomorrow."
+        ]
+      },
+      {
+        "id": "wa10",
         "title": "Write it before the day talks.",
         "lines": [
-          "In one sentence: why you are still building {{goal}}.",
+          "In one sentence: why you are still building this.",
           "The day will try to make you forget. That sentence is how you don't."
         ],
         "kicker": "Write"
@@ -210,36 +337,82 @@
     "speed": [
       {
         "id": "sa1",
-        "title": "The account does not lie.",
+        "title": "The account is a record of how fast you moved.",
         "lines": [
-          "Your bank account mirrors your speed, not your potential.",
-          "Whoever acts while the committee is still talking, wins."
-        ],
-        "kicker": "The wound"
+          "It is not a record of how good the idea was.",
+          "People with the same talent are still in the meeting. You can already be on the street."
+        ]
       },
       {
         "id": "sa2",
-        "title": "Are you moving, or rearranging the feeling of moving?",
+        "title": "Today is either motion or the feeling of motion.",
         "lines": [
-          "Be honest. Today is either motion or costume."
-        ],
-        "kicker": "Question"
+          "Arranging, polishing, circling — that can look like work and still leave the number unchanged.",
+          "Be honest about which one you are doing."
+        ]
       },
       {
         "id": "sa3",
-        "title": "The gap is not intelligence.",
+        "title": "Speed is the advantage you still have.",
         "lines": [
-          "{{name}}it is minutes.",
-          "Speed is the advantage. You act while others are still thinking."
-        ],
-        "kicker": "The cut"
+          "You do not need a bigger name. You need fewer minutes wasted.",
+          "Act while other people are still talking."
+        ]
       },
       {
         "id": "sa4",
-        "title": "I have already started.",
+        "title": "The gap is not intelligence. It is minutes.",
         "lines": [
-          "Mistakes are detours. Not endings. Recalculating.",
-          "Write the next ugly step toward {{goal}}. Then do it before the night."
+          "The person who ships while you are still preparing takes the room.",
+          "You can be that person this afternoon."
+        ]
+      },
+      {
+        "id": "sa5",
+        "title": "Harder is not more hours of spinning.",
+        "lines": [
+          "Harder is more force on the thing that actually moves {{goal}}.",
+          "Pick it, then hit it before the day leaks away."
+        ]
+      },
+      {
+        "id": "sa6",
+        "title": "Momentum is built in a streak of ugly hours.",
+        "lines": [
+          "One good hour is a start. Three in a row is a company beginning to move.",
+          "Do not break the chain for a mood."
+        ]
+      },
+      {
+        "id": "sa7",
+        "title": "Waiting for perfect is how slow people stay safe.",
+        "lines": [
+          "Safe and stuck often look the same from the inside.",
+          "Ship the version that exists."
+        ]
+      },
+      {
+        "id": "sa8",
+        "title": "Stay smart about where the speed goes.",
+        "lines": [
+          "Fast on the wrong task is still late.",
+          "Aim, then accelerate."
+        ]
+      },
+      {
+        "id": "sa9",
+        "title": "Do not stop when it starts to work a little.",
+        "lines": [
+          "A little is the most dangerous place to rest.",
+          "That is when you add more speed, not less."
+        ]
+      },
+      {
+        "id": "sa10",
+        "title": "Name the next move.",
+        "lines": [
+          "Not the year. The next ugly step toward {{goal}}.",
+          "Write it, then do it before the night gets a vote."
         ],
         "kicker": "Write"
       }
@@ -247,37 +420,82 @@
     "picture": [
       {
         "id": "va1",
-        "title": "The brain cannot tell.",
+        "title": "Your mind believes what you show it.",
         "lines": [
-          "A vivid picture and a real event land the same way.",
-          "To the brain, they are the same."
-        ],
-        "kicker": "Mind"
+          "A clear picture and a real event land in the same place.",
+          "If you can see the life, you can start living toward it today."
+        ]
       },
       {
         "id": "va2",
-        "title": "Can you see {{goal}} from this room?",
+        "title": "See it from this room, not from a fantasy island.",
         "lines": [
-          "Not a mood. The light. The hour. The door with your name.",
-          "If the picture is vague, the brain has nothing to keep."
-        ],
-        "kicker": "Question"
+          "The bills can be on the table and the future can still have a shape.",
+          "That is not denial. That is direction."
+        ]
       },
       {
         "id": "va3",
-        "title": "Not someday. Now.",
+        "title": "Not someday. The room. The hour.",
         "lines": [
-          "{{name}}you are already living it for the next ten breaths.",
-          "How does it feel. What do you see. What do you hear."
-        ],
-        "kicker": "Now"
+          "Can you see yourself already holding {{goal}} — the door, the light, the way you walk in?",
+          "Stay with that until it feels closer than the unpaid invoices."
+        ]
       },
       {
         "id": "va4",
-        "title": "Present tense.",
+        "title": "A blurry picture makes a blurry day.",
         "lines": [
-          "I am. I have. I earn.",
-          "Write {{goal}} as if it already happened. Then read it out loud."
+          "If you cannot see it, you will spend the day putting out fires.",
+          "If you can see it, the fires still happen, and you still know where you are going."
+        ]
+      },
+      {
+        "id": "va5",
+        "title": "The picture is allowed to be bigger than this month.",
+        "lines": [
+          "This month is loud. It does not get to set the size of the life.",
+          "Keep the picture large while you do the small hard things."
+        ]
+      },
+      {
+        "id": "va6",
+        "title": "Visit it, then go to work.",
+        "lines": [
+          "Seeing it is not the job. Seeing it is how you remember the job.",
+          "Then move faster, because the picture is waiting."
+        ]
+      },
+      {
+        "id": "va7",
+        "title": "Hold it when you are tired.",
+        "lines": [
+          "Tired is when people switch to a smaller life.",
+          "Tired is when you need the picture most."
+        ]
+      },
+      {
+        "id": "va8",
+        "title": "Make it specific enough to walk toward.",
+        "lines": [
+          "Vague hope does not survive an afternoon of bills.",
+          "A specific scene does."
+        ]
+      },
+      {
+        "id": "va9",
+        "title": "Do not stop rehearsing it.",
+        "lines": [
+          "Repetition is how a delusional mindset gets built.",
+          "Say it until your body starts to act like it is already true."
+        ]
+      },
+      {
+        "id": "va10",
+        "title": "Write it in the present.",
+        "lines": [
+          "If you close your eyes, can you see the life already?",
+          "Write it as I am, I have, I earn — like the door already has your name."
         ],
         "kicker": "Write"
       }
@@ -285,34 +503,82 @@
     "price": [
       {
         "id": "ca1",
-        "title": "Nobody gets this by accident.",
+        "title": "Nobody builds a company by accident.",
         "lines": [
-          "Nobody builds a company by accident. For a while, it takes obsession."
-        ],
-        "kicker": "Price"
+          "For a while it takes obsession. That is not a personality flaw. That is the bill.",
+          "If you want {{goal}}, something else has to get smaller."
+        ]
       },
       {
         "id": "ca2",
-        "title": "What are you still keeping that is holding you back?",
+        "title": "Comfort is the usual price, and most people will not pay it.",
         "lines": [
-          "The app. The friend. The version of the day that stays comfortable and goes nowhere."
-        ],
-        "kicker": "Question"
+          "The app. The friend. The version of the day that stays easy and goes nowhere.",
+          "You already know what you are still keeping."
+        ]
       },
       {
         "id": "ca3",
-        "title": "Name the trade.",
+        "title": "A free goal is not the real goal.",
         "lines": [
-          "{{name}}time, comfort, and being liked are the usual bill.",
-          "If {{goal}} is free, it is not the real goal."
-        ],
-        "kicker": "The cut"
+          "If it costs you nothing, it will change nothing.",
+          "Name the trade or the day will trade for you, badly."
+        ]
       },
       {
         "id": "ca4",
-        "title": "Write what you will give.",
+        "title": "You can be under pressure and still choose.",
         "lines": [
-          "One sentence. What you want, and what you are willing to lose to have it."
+          "The bills will try to choose for you. They will choose smaller.",
+          "You choose the life, then you pay in work."
+        ]
+      },
+      {
+        "id": "ca5",
+        "title": "What you keep is also a decision.",
+        "lines": [
+          "Keeping the easy hours is how the hard month repeats.",
+          "Give some of those hours to the company, today."
+        ]
+      },
+      {
+        "id": "ca6",
+        "title": "Pay in speed, not only in suffering.",
+        "lines": [
+          "Suffering without motion is just pain.",
+          "Motion is the payment that actually buys the future."
+        ]
+      },
+      {
+        "id": "ca7",
+        "title": "Be willing to look unreasonable for a stretch.",
+        "lines": [
+          "Reasonable schedules build reasonable lives.",
+          "You said you wanted more than that."
+        ]
+      },
+      {
+        "id": "ca8",
+        "title": "Spend your intelligence on the trade, not on excuses.",
+        "lines": [
+          "A clever reason to keep the old life is still the old life.",
+          "Find the cleanest trade, then take it."
+        ]
+      },
+      {
+        "id": "ca9",
+        "title": "Do not stop paying just because it hurts.",
+        "lines": [
+          "Hurt means the price is real.",
+          "Keep going. That is how you get the thing."
+        ]
+      },
+      {
+        "id": "ca10",
+        "title": "Write the trade.",
+        "lines": [
+          "What are you willing to give for this?",
+          "One sentence. What you want, and what you will put down to have it."
         ],
         "kicker": "Write"
       }
@@ -320,36 +586,82 @@
     "mirror": [
       {
         "id": "ra1",
-        "title": "The second you wake.",
+        "title": "The second you wake, the day will try to name you.",
         "lines": [
-          "Four sentences. Out loud. Before the day talks back.",
-          "A delusional mindset is built by repetition."
-        ],
-        "kicker": "Morning"
+          "Bills. Tired. Behind. That is a loud naming.",
+          "You get to speak first."
+        ]
       },
       {
         "id": "ra2",
-        "title": "Something extraordinary will happen to me today.",
+        "title": "Say something bigger than the morning.",
         "lines": [
-          "It will sound ridiculous. That is the point."
-        ],
-        "kicker": "Say this"
+          "It will sound ridiculous. That is the point.",
+          "Repetition is how a delusional mindset gets built."
+        ]
       },
       {
         "id": "ra3",
         "title": "I am already the person I am becoming.",
         "lines": [
-          "{{name}}I already have {{goal}}. It is only a matter of time.",
-          "In the mirror: I love you. I know where you are going."
-        ],
-        "kicker": "Say this"
+          "Not later. Not when the account looks better.",
+          "Say it like time is the only remaining detail."
+        ]
       },
       {
         "id": "ra4",
-        "title": "Write it like a fact.",
+        "title": "Out loud matters.",
         "lines": [
-          "Then read it before the night gets a vote.",
-          "Everything is lining up. Only good comes from this. I am safe."
+          "In your head it is a thought. Out loud it is a decision.",
+          "The room should hear who you are."
+        ]
+      },
+      {
+        "id": "ra5",
+        "title": "Do not let the unpaid invoices introduce you.",
+        "lines": [
+          "They can be on the table and still not be your name.",
+          "Your name is the sentence you keep repeating."
+        ]
+      },
+      {
+        "id": "ra6",
+        "title": "Speak it, then move like it is true.",
+        "lines": [
+          "Words without motion fade by noon.",
+          "Words plus speed become a day."
+        ]
+      },
+      {
+        "id": "ra7",
+        "title": "Keep saying it on the days it feels fake.",
+        "lines": [
+          "Fake is just early.",
+          "Early is where every real identity starts."
+        ]
+      },
+      {
+        "id": "ra8",
+        "title": "Be precise. Be stubborn.",
+        "lines": [
+          "A fuzzy sentence will not survive a hard afternoon.",
+          "A clear one will, if you do not drop it."
+        ]
+      },
+      {
+        "id": "ra9",
+        "title": "Do not stop talking to yourself like the future is already here.",
+        "lines": [
+          "The future arrives for people who rehearse it and then work.",
+          "Do both."
+        ]
+      },
+      {
+        "id": "ra10",
+        "title": "Write it in the present.",
+        "lines": [
+          "Who are you saying you are out loud?",
+          "Write it like a fact. Then read it before the night gets a vote."
         ],
         "kicker": "Write"
       }
@@ -357,243 +669,108 @@
     "briefing": [
       {
         "id": "b1",
-        "title": "You are building a company.",
+        "title": "This app is for building your company.",
         "lines": [
-          "Most people get a good idea, then they get realistic and go back to the job. This is how you stay with it when the feeling is gone."
+          "You come here every day. You read. You write. You do not skip."
         ]
       },
       {
         "id": "b2",
-        "title": "Every day is the same on purpose.",
+        "title": "Every day the company grows.",
         "lines": [
-          "You open the app. You read a few pages. You write one honest sentence.",
-          "Miss a day and the streak dies at midnight. The room stays. The number does not."
+          "Read the guide. Answer the question at the end. That is the day."
         ]
       },
       {
         "id": "b3",
-        "title": "Come back tomorrow as the same person.",
+        "title": "Miss a day and it is gone.",
         "lines": [
-          "{{name}}you will not feel ready. That is fine. Start now."
+          "The streak dies at midnight. The company goes with it. Come back tomorrow."
         ]
       }
     ]
   },
   "variants": {
-    "delusion": {
-      "a": [
-        {
-          "id": "da1",
-          "title": "You woke up in the same room.",
-          "lines": [
-            "Same number. Same joke that this is just a phase.",
-            "If this was actually your life, would you still be this angry about it?"
-          ],
-          "kicker": "The wound"
-        },
-        {
-          "id": "da2",
-          "title": "That anger is not confusion.",
-          "lines": [
-            "It is the part of you that refuses the small version.",
-            "People who accepted the small version sleep fine. You don't."
-          ],
-          "kicker": "Stay with it"
-        },
-        {
-          "id": "da3",
-          "title": "Who told you the picture is embarrassing?",
-          "lines": [
-            "Realistic sounds adult. It is often just fear with better manners.",
-            "It takes {{goal}} and cuts it until it fits a bad month."
-          ],
-          "kicker": "Question"
-        },
-        {
-          "id": "da4",
-          "title": "Success starts in the mind.",
-          "lines": [
-            "If you cannot picture it, you will not become it.",
-            "A delusional mindset is built by repetition. It will sound ridiculous at first. That is the point."
-          ],
-          "kicker": "The rule"
-        },
-        {
-          "id": "da5",
-          "title": "Delusional is the job.",
-          "lines": [
-            "It is not a weakness. It is the price of anything large.",
-            "It stops being crazy when you make it real."
-          ],
-          "kicker": "The cut"
-        },
-        {
-          "id": "da6",
-          "title": "Say it like a fact.",
-          "lines": [
-            "{{name}}I already have {{goal}}. It is only a matter of time.",
-            "Write that sentence. Then the day has a direction."
-          ],
-          "kicker": "Write"
-        }
-      ],
-      "b": [
-        {
-          "id": "db1",
-          "title": "The laughable goal is the real one.",
-          "lines": [
-            "The safe goal is a costume. You would hit it anyway.",
-            "Which picture is so large that people laugh when you say it out loud?"
-          ],
-          "kicker": "The wound"
-        },
-        {
-          "id": "db2",
-          "title": "If failure was impossible.",
-          "lines": [
-            "What would you do this week.",
-            "If the answer is not {{goal}}, you are still negotiating with the room."
-          ],
-          "kicker": "Question"
-        },
-        {
-          "id": "db3",
-          "title": "Stay with the ridiculous version.",
-          "lines": [
-            "{{name}}the version of you that looks delusional from this room is the one that gets you out of it.",
-            "Hold that picture while the bills are still loud. That is the work."
-          ],
-          "kicker": "Stay with it"
-        },
-        {
-          "id": "db4",
-          "title": "Four levers.",
-          "lines": [
-            "See it. Say it. Risk it. Move fast.",
-            "Missing one of them is how a dream becomes a mood."
-          ],
-          "kicker": "The rule"
-        },
-        {
-          "id": "db5",
-          "title": "When it stops being crazy.",
-          "lines": [
-            "Delusion is only delusional when you fail to make it real.",
-            "Be willing to look crazy in the present tense."
-          ],
-          "kicker": "The cut"
-        },
-        {
-          "id": "db6",
-          "title": "Write the insane sentence.",
-          "lines": [
-            "I am. I have. I earn. {{goal}}.",
-            "If it embarrasses you a little, you are close."
-          ],
-          "kicker": "Write"
-        }
-      ],
-      "c": [
-        {
-          "id": "dc1",
-          "kicker": "The wound",
-          "title": "You already know the small life is not yours.",
-          "lines": [
-            "You can feel it in the morning before the phone. The job that fits. The number that is fine. The version of you that would be easy to explain.",
-            "If that was enough, you would be sleeping."
-          ]
-        },
-        {
-          "id": "dc2",
-          "kicker": "Question",
-          "title": "Who taught you that {{goal}} is embarrassing?",
-          "lines": [
-            "Was it a parent who got tired. A friend who got realistic. A month that scared you into shrinking.",
-            "Name the voice. Then notice it is not yours."
-          ]
-        },
-        {
-          "id": "dc3",
-          "kicker": "Stay with it",
-          "title": "Hold the picture while it still looks crazy.",
-          "lines": [
-            "See it. Say it. Risk it. Move fast. Missing one of them is how a dream becomes a mood.",
-            "{{name}}the ridiculous version is the real one. The safe goal is a costume. You would hit it anyway."
-          ]
-        },
-        {
-          "id": "dc4",
-          "kicker": "The rule",
-          "title": "Success starts in the mind.",
-          "lines": [
-            "If you cannot picture it, you will not become it.",
-            "A delusional mindset is built by repetition. It will sound ridiculous at first. That is the point. It stops being crazy when you make it real."
-          ]
-        },
-        {
-          "id": "dc5",
-          "kicker": "Write",
-          "title": "Say it like a fact.",
-          "lines": [
-            "I already have {{goal}}. It is only a matter of time.",
-            "Write it in the present tense. Then the day has a direction."
-          ]
-        }
-      ]
-    },
     "money": {
       "a": [
         {
           "id": "ma1",
-          "title": "That heavy feeling is not a verdict.",
+          "title": "The bills can sit on you all day.",
           "lines": [
-            "Waking up already tired. Going to bed with the same open bills.",
-            "It feels like the truth. It is only the weather."
-          ],
-          "kicker": "The wound"
+            "You already know this feeling. The unpaid ones. The ones you should have paid weeks ago. They follow you into the morning and they are still there when you try to sleep.",
+            "That weight is real, and it is still not a verdict on the rest of your life."
+          ]
         },
         {
           "id": "ma2",
-          "title": "Would a rich person still be this loud in your head?",
+          "title": "An empty account is loud. It is not forever.",
           "lines": [
-            "Empty accounts are loud. They are not forever.",
-            "Everyone who got out sat in a room like this first."
-          ],
-          "kicker": "Question"
+            "When the number will not move, your head will tell you this is just your life now.",
+            "That voice is the weather of a hard month. It is not a law, and it does not get to close the door."
+          ]
         },
         {
           "id": "ma3",
-          "title": "The ceiling is fake.",
+          "title": "People who got out sat in a room like this.",
           "lines": [
-            "The people with money were not born on a different planet.",
-            "They stayed with a number that looked insane from an empty account."
-          ],
-          "kicker": "The cut"
+            "Late rent. A number that would not move. A day that felt already lost before noon.",
+            "Then they stayed with the work long enough for the story to change."
+          ]
         },
         {
           "id": "ma4",
-          "title": "Do not trust the night.",
+          "title": "There is always a next move.",
           "lines": [
-            "11pm will tell you it is over. Morning will tell you the same lie in a different light.",
-            "Neither of them can see next month."
-          ],
-          "kicker": "Stay with it"
+            "You may not like it. Call. Sell. Cut. Ask. Ship the ugly version. A small way out is still a way out.",
+            "The trap is believing this feeling has no exit."
+          ]
         },
         {
           "id": "ma5",
-          "title": "There is always a next move.",
+          "title": "Everything you want is still allowed.",
           "lines": [
-            "{{name}}the trap is believing this feeling has no exit.",
-            "Call. Sell. Cut. Ask. Ship the ugly version."
-          ],
-          "kicker": "The rule"
+            "A bigger company, a clean account, a life your family can stand on — none of that is closed because this week is heavy.",
+            "If someone else is living it, it is possible. Slow, maybe. Closed, no."
+          ]
         },
         {
           "id": "ma6",
+          "title": "Harder and faster is how you leave this room.",
+          "lines": [
+            "Talent sitting still loses to someone who moves today.",
+            "Build more momentum before the night talks you into waiting."
+          ]
+        },
+        {
+          "id": "ma7",
+          "title": "Do not stop.",
+          "lines": [
+            "The people who make it are not the ones who felt ready. They are the ones who did not quit on the day the bills were screaming.",
+            "One more day of not stopping is how a company gets built."
+          ]
+        },
+        {
+          "id": "ma8",
+          "title": "Stay smart while you stay hard.",
+          "lines": [
+            "Working longer on the wrong thing is still stuck. Think, then move, then think again, and keep going.",
+            "You need both. A brain without motion is a meeting. Motion without a brain is noise."
+          ]
+        },
+        {
+          "id": "ma9",
+          "title": "This season will pass if you do not.",
+          "lines": [
+            "The pain is telling you to shrink. Your job is to keep the picture and keep working.",
+            "Up from here there is no ceiling except the one you agree to."
+          ]
+        },
+        {
+          "id": "ma10",
           "title": "Write the real number.",
           "lines": [
-            "Not the rent. The money you are actually going after.",
-            "Say it like it is allowed. Then the day has a direction."
+            "Not the rent you are scared of. The money you are actually going after.",
+            "Write it like it is allowed. Then this day has a direction."
           ],
           "kicker": "Write"
         }
@@ -601,36 +778,82 @@
       "b": [
         {
           "id": "mb1",
-          "title": "The account is a mirror of speed.",
+          "title": "The number in your head is not the rest of your life.",
           "lines": [
-            "Not of talent. Not of how badly you want it.",
-            "Whoever acts while the committee is still talking, wins."
-          ],
-          "kicker": "The wound"
+            "It can sit on your neck from the first hour of the day until you lie down, and it still does not get to decide who you become.",
+            "A hard season is a season. It is not a personality."
+          ]
         },
         {
           "id": "mb2",
-          "title": "Are you arranging money, or avoiding the ask?",
+          "title": "Fear repeats itself. The future does not have to.",
           "lines": [
-            "A small solution is still a way out.",
-            "Temporary does not mean it does not hurt. It means it can end."
-          ],
-          "kicker": "Question"
+            "Yesterday's unpaid bill will try to write tomorrow for you.",
+            "Let it be loud. Do not let it be the plan."
+          ]
         },
         {
           "id": "mb3",
-          "title": "You can want more than surviving this week.",
+          "title": "Someone with your same mess already got through.",
           "lines": [
-            "There is no top. There is only the next move you have not made yet.",
-            "Up from here, the ceiling is fake."
-          ],
-          "kicker": "The cut"
+            "They were not special first. They were tired, behind, and still in the room.",
+            "Then they did the next useful thing, and then the next one."
+          ]
         },
         {
           "id": "mb4",
-          "title": "Write the number that would actually change your life.",
+          "title": "A small solution still counts.",
           "lines": [
-            "{{name}}be specific. A vibe is how people stay broke and poetic."
+            "You do not need a perfect rescue. You need a move that makes the number less stuck than it was this morning.",
+            "Ugly progress is still progress."
+          ]
+        },
+        {
+          "id": "mb5",
+          "title": "The ceiling is a story you keep repeating.",
+          "lines": [
+            "You can want more than surviving this week. There is no top. There is only the next move you have not made yet.",
+            "Wanting more is not greedy. It is how you get your family out."
+          ]
+        },
+        {
+          "id": "mb6",
+          "title": "Move faster than the worry.",
+          "lines": [
+            "Worry will fill every hour you leave empty. Work fills it with a direction.",
+            "More momentum today is how the night gets quieter."
+          ]
+        },
+        {
+          "id": "mb7",
+          "title": "Quitting would make the bills right.",
+          "lines": [
+            "Staying makes them temporary.",
+            "That is the whole choice, and you already know which side you are on."
+          ]
+        },
+        {
+          "id": "mb8",
+          "title": "Be hard and be precise.",
+          "lines": [
+            "Hit the thing that actually moves money. Do not spend the day rearranging the feeling of work.",
+            "Intelligence is choosing the next move. Grit is doing it before you feel ready."
+          ]
+        },
+        {
+          "id": "mb9",
+          "title": "Hold the picture while the account is empty.",
+          "lines": [
+            "Anyone can believe in the company when the number looks good.",
+            "The work is believing in it today, when it does not."
+          ]
+        },
+        {
+          "id": "mb10",
+          "title": "Write the real number.",
+          "lines": [
+            "Say the money you are actually going after, not the safe version that would only cover last month.",
+            "Put it down like a fact. Then go get a piece of it."
           ],
           "kicker": "Write"
         }
@@ -638,48 +861,84 @@
       "c": [
         {
           "id": "mc1",
-          "kicker": "The wound",
-          "title": "Empty is loud. Empty is not a personality.",
+          "title": "You can be behind and still going.",
           "lines": [
-            "The account talks first. Then the night agrees. Then you start calling that voice wisdom.",
-            "It is not wisdom. It is a season with a microphone."
+            "Being late on bills does not mean you are finished. It means this stretch is expensive and loud.",
+            "Plenty of companies were built in months that looked like this from the inside."
           ]
         },
         {
           "id": "mc2",
-          "kicker": "Question",
-          "title": "Would you still want this if the bills were quiet?",
+          "title": "The panic wants a small life.",
           "lines": [
-            "If the answer is {{goal}}, the money problem is not the dream. It is the weather on top of it.",
-            "If the answer is just relief, you have been negotiating with rent, not with your life."
+            "It will offer you a version of you that only tries to get through the week.",
+            "You can pay attention to the panic without becoming it."
           ]
         },
         {
           "id": "mc3",
-          "kicker": "Stay with it",
-          "title": "Do not let a bad month resize the number.",
+          "title": "This has been survived before.",
           "lines": [
-            "11pm will tell you it is over. Morning will tell you the same lie in a different light.",
-            "Neither of them can see the account you are actually going after."
+            "Other people woke up with the same tightness in the chest and still made a way through.",
+            "You are not the first person to carry this, and you do not have to carry it forever."
           ]
         },
         {
           "id": "mc4",
-          "kicker": "The cut",
-          "title": "Your bank account mirrors your speed.",
+          "title": "Pick one door and walk.",
           "lines": [
-            "Not your talent. Not how badly you want it. Whoever acts while the committee is still talking, wins.",
-            "{{name}}there is always a next move. Call. Sell. Cut. Ask. Ship the ugly version."
+            "A call. A sale. A cut. A thing you ship before it is pretty.",
+            "Waiting for a clean exit is how people stay in the room."
           ]
         },
         {
           "id": "mc5",
-          "kicker": "Write",
-          "title": "Write the number that would change your life.",
+          "title": "The idea is still allowed.",
           "lines": [
-            "Not the rent. The number. Present tense. As if it is already allowed.",
-            "I earn it. I have it. Then one ugly action today that matches the sentence."
+            "A hard month does not get to cancel the company in your head.",
+            "If the idea is good, it stays good while you are under pressure. Pressure is not the judge."
           ]
+        },
+        {
+          "id": "mc6",
+          "title": "Build speed on purpose.",
+          "lines": [
+            "Do the next hour like it matters, because it does.",
+            "Faster does not mean sloppy. It means you stop giving the day away to fear."
+          ]
+        },
+        {
+          "id": "mc7",
+          "title": "Keep going when it would be easier to freeze.",
+          "lines": [
+            "Freeze feels like rest. It is how the same bills are still here next month.",
+            "Motion is how you get out, even when the motion is small."
+          ]
+        },
+        {
+          "id": "mc8",
+          "title": "Think, then hit it.",
+          "lines": [
+            "You do not need more hours of spinning. You need a clear next step and then full force on that step.",
+            "Hard work aimed at the right thing is how momentum starts."
+          ]
+        },
+        {
+          "id": "mc9",
+          "title": "Do not let tonight edit the dream.",
+          "lines": [
+            "Night will try to shrink what you want until it fits the unpaid invoices.",
+            "Let the night talk. Do not let it write."
+          ]
+        },
+        {
+          "id": "mc10",
+          "title": "Write the real number.",
+          "lines": [
+            "What money are you actually going after, if you stop protecting yourself from sounding crazy?",
+            "Write that. Then the day knows where to go."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -689,44 +948,80 @@
           "id": "pa1",
           "title": "Stuck is a feeling. It is not a fact.",
           "lines": [
-            "Morning hits and everything looks closed. The job. The money. The version of you that never left.",
+            "Morning can make everything look closed — the money, the job, the version of you that never left.",
             "That picture is yesterday talking. It is not a law."
-          ],
-          "kicker": "The wound"
+          ]
         },
         {
           "id": "pa2",
           "title": "Someone already has your impossible.",
           "lines": [
-            "They eat. They sleep. They used to be exactly where you are.",
+            "The life you want is ordinary for somebody. They eat. They sleep. They used to be exactly where you are.",
             "If it exists, it is available. Slow, maybe. Closed, no."
-          ],
-          "kicker": "Stay with it"
+          ]
         },
         {
           "id": "pa3",
-          "title": "The limit is a sentence you keep repeating.",
+          "title": "You have been practicing I cannot.",
           "lines": [
-            "{{name}}you have been practicing I cannot until it felt like physics.",
-            "It is not physics. It is a habit."
-          ],
-          "kicker": "Question"
+            "Say it enough times and it starts to feel like physics.",
+            "It is not physics. It is a habit, and habits can be broken by what you do today."
+          ]
         },
         {
           "id": "pa4",
-          "title": "There is no top.",
+          "title": "A bad season is not a closed door.",
           "lines": [
-            "People treat the next level like a wall. There is no wall.",
-            "There is only the next thing you have not done yet. After that, another one."
-          ],
-          "kicker": "The cut"
+            "No money this month does not mean the company cannot exist. It means this month is hard.",
+            "Hard and impossible are not the same word."
+          ]
         },
         {
           "id": "pa5",
-          "title": "Act like the door is open.",
+          "title": "There is no top.",
           "lines": [
-            "Write what you would do this week if you already knew {{goal}} was possible.",
-            "Then treat that sentence as the plan, not the fantasy."
+            "People treat the next level like a wall. There is no wall. There is only the next thing you have not done yet, and then another one.",
+            "You are allowed to keep going."
+          ]
+        },
+        {
+          "id": "pa6",
+          "title": "Move as if the door is open.",
+          "lines": [
+            "Waiting until you feel sure is how years disappear.",
+            "Act like it is possible and the day starts to look like a plan instead of a wall."
+          ]
+        },
+        {
+          "id": "pa7",
+          "title": "Harder, faster, again.",
+          "lines": [
+            "The people who get there did not wait for a better mood. They built speed while they were still afraid.",
+            "More momentum today is how possible becomes real."
+          ]
+        },
+        {
+          "id": "pa8",
+          "title": "Stay with it long enough.",
+          "lines": [
+            "Most ideas do not fail because they were stupid. They fail because the person stopped in the hard stretch.",
+            "If you do not stop, the stretch ends."
+          ]
+        },
+        {
+          "id": "pa9",
+          "title": "You do not need permission.",
+          "lines": [
+            "The world will not send a letter that says you may begin.",
+            "Beginning is how you find out it was possible."
+          ]
+        },
+        {
+          "id": "pa10",
+          "title": "Write the open door.",
+          "lines": [
+            "What would you do this week if you already knew it was possible?",
+            "Write that as the plan, not as a wish. Then treat {{goal}} like the next obvious step."
           ],
           "kicker": "Write"
         }
@@ -734,36 +1029,82 @@
       "b": [
         {
           "id": "pb1",
-          "title": "A bad season is not a closed door.",
+          "title": "The closed feeling is not the map.",
           "lines": [
-            "No money this month does not mean the company cannot exist.",
-            "Hard and impossible are not the same word."
-          ],
-          "kicker": "The wound"
+            "It can sit on you all day, the same way unpaid bills sit on you, and still be wrong about what is available.",
+            "Feel it. Do not obey it."
+          ]
         },
         {
           "id": "pb2",
-          "title": "If someone watched you today.",
+          "title": "Your future is already someone's Tuesday.",
           "lines": [
-            "Would they say your behavior matches {{goal}}?",
-            "Or would they say you are waiting to feel ready?"
-          ],
-          "kicker": "Question"
+            "That is the simplest proof. Ordinary people live the life you keep calling crazy.",
+            "They were not born on a different planet. They stayed."
+          ]
         },
         {
           "id": "pb3",
-          "title": "The company gets built on the ugly days.",
+          "title": "Impossible is often just unfamiliar.",
           "lines": [
-            "Not by people who wait for a clean morning.",
-            "All of this is temporary. Your picture does not have to be."
-          ],
-          "kicker": "The cut"
+            "You have not done it yet, so your brain calls it closed.",
+            "New is not the same as never."
+          ]
         },
         {
           "id": "pb4",
-          "title": "Write the week as if it is allowed.",
+          "title": "This week can still turn.",
           "lines": [
-            "{{name}}one ugly move you will actually do before tonight."
+            "You do not need the whole year to get better today.",
+            "One honest move is enough to prove the door is not locked."
+          ]
+        },
+        {
+          "id": "pb5",
+          "title": "Keep the big picture while the day is small.",
+          "lines": [
+            "The work in front of you can look tiny next to {{goal}}.",
+            "Tiny work, repeated, is how big things get built."
+          ]
+        },
+        {
+          "id": "pb6",
+          "title": "Go quicker than the doubt.",
+          "lines": [
+            "Doubt loves a long afternoon with nothing to show.",
+            "Give it less room. Do the next thing before it finishes the speech."
+          ]
+        },
+        {
+          "id": "pb7",
+          "title": "Do not wait to feel like a person who can.",
+          "lines": [
+            "That feeling comes after the work, not before.",
+            "Start, and let your mind catch up."
+          ]
+        },
+        {
+          "id": "pb8",
+          "title": "Intelligence is seeing a way. Grit is taking it.",
+          "lines": [
+            "You need both. A clever plan you do not run is still stuck.",
+            "A hard day aimed at the right door is how you get through."
+          ]
+        },
+        {
+          "id": "pb9",
+          "title": "Stay. Then stay again.",
+          "lines": [
+            "The people you admire did not have a cleaner month than you. They had more days where they did not quit.",
+            "That is still available to you this afternoon."
+          ]
+        },
+        {
+          "id": "pb10",
+          "title": "Write the open door.",
+          "lines": [
+            "If you already knew {{goal}} was possible, what would you do this week?",
+            "Write it in plain words. Then go do the first ugly piece."
           ],
           "kicker": "Write"
         }
@@ -771,48 +1112,335 @@
       "c": [
         {
           "id": "pc1",
-          "kicker": "The wound",
-          "title": "Stuck is yesterday talking.",
+          "title": "Today can feel like a trap and still not be one.",
           "lines": [
-            "Morning hits and everything looks closed. The job. The money. The version of you that never left.",
-            "That picture is a recording. It is not a law."
+            "The tightness, the unpaid things, the sense that you are already late — all of that can be true at the same time as a way through.",
+            "Two things can be true. The pain, and the path."
           ]
         },
         {
           "id": "pc2",
-          "kicker": "Question",
-          "title": "If failure was impossible, what would you do this week?",
+          "title": "Possible is a decision you practice.",
           "lines": [
-            "If the answer is not {{goal}}, you are still protecting a smaller story.",
-            "Someone already has your impossible. They eat. They sleep. They used to be exactly where you are."
+            "You do not wait until the account looks friendly. You decide, and then you work like the decision was correct.",
+            "That is how people leave rooms like this."
           ]
         },
         {
           "id": "pc3",
-          "kicker": "Stay with it",
-          "title": "Hard and impossible are not the same word.",
+          "title": "Somebody started from worse.",
           "lines": [
-            "No money this month does not mean the company cannot exist.",
-            "A bad season is not a closed door. There is no top. There is only the next thing you have not done yet."
+            "Not as a slogan. As a fact. Worse rooms. Later bills. Less help.",
+            "They kept going. That option is still on the table for you."
           ]
         },
         {
           "id": "pc4",
-          "kicker": "The cut",
-          "title": "Act like the door is open.",
+          "title": "The next hour is still yours.",
           "lines": [
-            "{{name}}you have been practicing I cannot until it felt like physics. It is a habit.",
-            "Break the sentence and the week opens a little."
+            "You cannot fix the whole mess before lunch. You can make the next hour count.",
+            "That is how momentum starts when the mountain looks too big."
           ]
         },
         {
           "id": "pc5",
-          "kicker": "Write",
-          "title": "Write the week as if it is allowed.",
+          "title": "Do not shrink the idea to fit the week.",
           "lines": [
-            "One ugly move toward {{goal}} before tonight.",
-            "Then treat that sentence as the plan, not the fantasy."
+            "The week is loud. The idea can stay large.",
+            "{{goal}} does not get smaller because you are tired."
           ]
+        },
+        {
+          "id": "pc6",
+          "title": "Speed is respect for your own time.",
+          "lines": [
+            "Every slow day is a vote that this can wait.",
+            "It cannot wait. Move."
+          ]
+        },
+        {
+          "id": "pc7",
+          "title": "Keep your head on while you push.",
+          "lines": [
+            "Blind grinding on the wrong task is how people get exhausted and still stuck.",
+            "Choose the move that actually opens a door, then hit it hard."
+          ]
+        },
+        {
+          "id": "pc8",
+          "title": "Stopping would make the fear correct.",
+          "lines": [
+            "Staying makes the fear a chapter.",
+            "You are writing a chapter, not an ending."
+          ]
+        },
+        {
+          "id": "pc9",
+          "title": "You are allowed to want the whole thing.",
+          "lines": [
+            "Not a smaller, more reasonable life. The thing you actually want.",
+            "Wanting it is the start. Working today is how it stops being a fantasy."
+          ]
+        },
+        {
+          "id": "pc10",
+          "title": "Write the open door.",
+          "lines": [
+            "What would you do this week if you already knew it was possible?",
+            "Write the real answer, even if it scares you, and let that be today's map."
+          ],
+          "kicker": "Write"
+        }
+      ]
+    },
+    "delusion": {
+      "a": [
+        {
+          "id": "da1",
+          "title": "Realistic is how people stay put.",
+          "lines": [
+            "It sounds adult. A lot of the time it is just fear with better manners.",
+            "It takes the company in your head and cuts it until it fits a bad month."
+          ]
+        },
+        {
+          "id": "da2",
+          "title": "The picture is supposed to look too big.",
+          "lines": [
+            "If your future still looks reasonable, it is probably just your present with nicer weather.",
+            "You are allowed to want a life that current-you cannot explain yet."
+          ]
+        },
+        {
+          "id": "da3",
+          "title": "Stay with the ridiculous version.",
+          "lines": [
+            "The version of you that looks crazy from this room is the one that gets you out of it.",
+            "Hold that picture while the bills are still loud. That is the work."
+          ]
+        },
+        {
+          "id": "da4",
+          "title": "Delusion is not lying.",
+          "lines": [
+            "You can see the empty account and still refuse to shrink the company.",
+            "Problems are temporary. The picture you keep is not."
+          ]
+        },
+        {
+          "id": "da5",
+          "title": "A hard week does not get to resize the dream.",
+          "lines": [
+            "The night will try to negotiate. Let it talk. Do not let it edit.",
+            "Up from here there is no ceiling except the one you agree to."
+          ]
+        },
+        {
+          "id": "da6",
+          "title": "Every idea is allowed if you stay on it.",
+          "lines": [
+            "People will call it too much. They are measuring from their own tired week.",
+            "You measure from the life you are building, and you keep going."
+          ]
+        },
+        {
+          "id": "da7",
+          "title": "Work like the picture is already true.",
+          "lines": [
+            "Not as a pose. As a pace. Harder, faster, with more momentum than yesterday.",
+            "Belief without motion is a mood. Motion is how belief becomes a company."
+          ]
+        },
+        {
+          "id": "da8",
+          "title": "Do not get smart in the direction of smaller.",
+          "lines": [
+            "Clever reasons to wait are still waiting.",
+            "Use your head to find the next move, then be stubborn about taking it."
+          ]
+        },
+        {
+          "id": "da9",
+          "title": "Do not stop because it looks foolish today.",
+          "lines": [
+            "Foolish is often just early.",
+            "Stay early long enough and it starts to look obvious."
+          ]
+        },
+        {
+          "id": "da10",
+          "title": "Say the insane sentence.",
+          "lines": [
+            "Write the thing you are not supposed to want yet.",
+            "If it embarrasses you a little, you are close. Put it down anyway."
+          ],
+          "kicker": "Write"
+        }
+      ],
+      "b": [
+        {
+          "id": "db1",
+          "title": "The small version of you is trying to run the day.",
+          "lines": [
+            "It wants a plan that fits the unpaid bills and a dream that will not scare anyone.",
+            "That version is trying to keep you safe. It will also keep you here."
+          ]
+        },
+        {
+          "id": "db2",
+          "title": "Want the thing that does not fit yet.",
+          "lines": [
+            "{{goal}} is allowed even when your account says otherwise.",
+            "The account is a snapshot. It is not the ceiling."
+          ]
+        },
+        {
+          "id": "db3",
+          "title": "Hold the picture through the noise.",
+          "lines": [
+            "The noise is the bills, the hour, the thought that you should be further along.",
+            "The picture is why you are still in the game. Do not trade it for quiet."
+          ]
+        },
+        {
+          "id": "db4",
+          "title": "Other people thought their dream was too big too.",
+          "lines": [
+            "Then they lived it, and it became furniture.",
+            "Yours can do the same if you do not put it down."
+          ]
+        },
+        {
+          "id": "db5",
+          "title": "Be delusional on purpose.",
+          "lines": [
+            "The alternative is becoming realistic and going back.",
+            "Going back is the only version that should scare you."
+          ]
+        },
+        {
+          "id": "db6",
+          "title": "Move like it is already yours.",
+          "lines": [
+            "Speed is how a big picture stops being a poster on the wall.",
+            "Do the next hour as the person who does not get to quit."
+          ]
+        },
+        {
+          "id": "db7",
+          "title": "Stay when it would be easier to look normal.",
+          "lines": [
+            "Normal is often just other people's fear.",
+            "You can be kind and still refuse to shrink."
+          ]
+        },
+        {
+          "id": "db8",
+          "title": "Think big, then do the next small brutal thing.",
+          "lines": [
+            "The dream without the next step is a story. The next step without the dream is a job you hate.",
+            "You need both, today."
+          ]
+        },
+        {
+          "id": "db9",
+          "title": "This pressure is a chapter.",
+          "lines": [
+            "It feels like the whole book because you are inside it.",
+            "Keep writing. The chapter ends for people who do not stop."
+          ]
+        },
+        {
+          "id": "db10",
+          "title": "Say the insane sentence.",
+          "lines": [
+            "What are you not supposed to want yet?",
+            "Write it in the present, like it already has your name on it."
+          ],
+          "kicker": "Write"
+        }
+      ],
+      "c": [
+        {
+          "id": "dc1",
+          "title": "If it still sounds reasonable, it is probably too small.",
+          "lines": [
+            "Reasonable is what you say when you are tired and the invoices are open.",
+            "Tired you is not the person who sets the size of the company."
+          ]
+        },
+        {
+          "id": "dc2",
+          "title": "You can be in a mess and still keep a huge picture.",
+          "lines": [
+            "Those two things can live in the same day.",
+            "The mess is now. The picture is the point of now."
+          ]
+        },
+        {
+          "id": "dc3",
+          "title": "Protect the dream from the afternoon.",
+          "lines": [
+            "Afternoons are when people become realistic.",
+            "Eat if you need to. Do not let the afternoon cut the picture in half."
+          ]
+        },
+        {
+          "id": "dc4",
+          "title": "Someone will tell you to be practical.",
+          "lines": [
+            "Practical got them a life they quietly hate.",
+            "Listen, then go back to the thing that still makes you sit up."
+          ]
+        },
+        {
+          "id": "dc5",
+          "title": "The ridiculous version is the useful one.",
+          "lines": [
+            "It pulls you forward when the bills try to pull you under.",
+            "Keep it close enough that you can still see it while you work."
+          ]
+        },
+        {
+          "id": "dc6",
+          "title": "Work harder than the joke.",
+          "lines": [
+            "People will joke. Let them.",
+            "Your answer is more output, more speed, more days in a row."
+          ]
+        },
+        {
+          "id": "dc7",
+          "title": "Do not wait for a cleaner month to want it.",
+          "lines": [
+            "The cleaner month is what you get after you stay.",
+            "Want it now, in the dirt."
+          ]
+        },
+        {
+          "id": "dc8",
+          "title": "Use your brain to aim. Use your will to stay.",
+          "lines": [
+            "Aim at {{goal}}. Stay through the part that feels stupid.",
+            "That combination is how outsized things get built."
+          ]
+        },
+        {
+          "id": "dc9",
+          "title": "You are not crazy. You are early.",
+          "lines": [
+            "Early looks the same as crazy to people who stopped.",
+            "Do not stop."
+          ]
+        },
+        {
+          "id": "dc10",
+          "title": "Say the insane sentence.",
+          "lines": [
+            "Write the thing you are not supposed to want yet, in one clear line.",
+            "If your stomach drops a little, you found it."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -822,10 +1450,9 @@
           "id": "wa1",
           "title": "The bad feeling means you still care.",
           "lines": [
-            "You wake up sick of being stuck. That is not proof you should stop.",
-            "That is proof this still matters."
-          ],
-          "kicker": "The wound"
+            "You wake up sick of being stuck. That is not proof you should stop. That is proof this still matters.",
+            "People who gave up sleep fine. You don't."
+          ]
         },
         {
           "id": "wa2",
@@ -833,31 +1460,69 @@
           "lines": [
             "Without a why, the day is only invoices and fear.",
             "With a why, the same day is a season you are walking through."
-          ],
-          "kicker": "Stay with it"
+          ]
         },
         {
           "id": "wa3",
-          "title": "Is this for a life you refuse to return to?",
+          "title": "Your why is a life you refuse to return to.",
           "lines": [
-            "{{name}}it is not a quote on a wall. It is your family not being stuck. It is you not becoming small again."
-          ],
-          "kicker": "Question"
+            "It is not a quote on a wall. It is your family not being stuck. It is you not becoming small again.",
+            "Keep that in the room today."
+          ]
         },
         {
           "id": "wa4",
           "title": "You already know it.",
           "lines": [
-            "You do not need a new why. You need to stop burying the one you had at 1am.",
+            "You do not need a new why. You need to stop burying the one you had at 1am when you could not sleep.",
             "Bring it into the morning, while the feeling is still honest."
-          ],
-          "kicker": "The cut"
+          ]
         },
         {
           "id": "wa5",
+          "title": "This is how you stay.",
+          "lines": [
+            "The company gets built by people who remember, on the ugly days, why they started.",
+            "Not by people who wait to feel ready."
+          ]
+        },
+        {
+          "id": "wa6",
+          "title": "The pain is temporary. The reason does not have to be.",
+          "lines": [
+            "Bills pass. Seasons pass. The person you are doing this for is still there.",
+            "Work for them today, harder than the fear."
+          ]
+        },
+        {
+          "id": "wa7",
+          "title": "Move faster because it matters.",
+          "lines": [
+            "If the why is real, delay is a kind of betrayal.",
+            "Build momentum like someone is waiting on the other side of this stretch, because they are."
+          ]
+        },
+        {
+          "id": "wa8",
+          "title": "Stay intelligent about the why.",
+          "lines": [
+            "Do the work that actually serves it, not the work that only looks busy.",
+            "Caring is not enough. Caring plus a clear next step is enough for today."
+          ]
+        },
+        {
+          "id": "wa9",
+          "title": "Do not stop on the day it would be easiest.",
+          "lines": [
+            "That is the day that decides the story.",
+            "Stay. Then stay tomorrow."
+          ]
+        },
+        {
+          "id": "wa10",
           "title": "Write it before the day talks.",
           "lines": [
-            "In one sentence: why you are still building {{goal}}.",
+            "In one sentence: why you are still building this.",
             "The day will try to make you forget. That sentence is how you don't."
           ],
           "kicker": "Write"
@@ -866,36 +1531,82 @@
       "b": [
         {
           "id": "wb1",
-          "title": "People who gave up sleep fine.",
+          "title": "You are tired because it still matters.",
           "lines": [
-            "You don't. That is not a defect.",
-            "That is the last honest part of you."
-          ],
-          "kicker": "The wound"
+            "If it did not matter, you would have gone numb already.",
+            "The ache is a signal. Treat it like one."
+          ]
         },
         {
           "id": "wb2",
-          "title": "Who is this for if it works?",
+          "title": "Name who this is for.",
           "lines": [
-            "Say the name. Or say yourself. Do not skip it.",
-            "{{identity}}"
-          ],
-          "kicker": "Question"
+            "A face. A kitchen. A future that does not look like this month.",
+            "When the unpaid bills get loud, look at that face, not at the ceiling."
+          ]
         },
         {
           "id": "wb3",
-          "title": "This is how you stay.",
+          "title": "A why turns pressure into fuel.",
           "lines": [
-            "The company gets built by people who remember, on the ugly days, why they started.",
-            "Not by people who wait to feel ready."
-          ],
-          "kicker": "The cut"
+            "Same work, different meaning.",
+            "Without it you are only surviving. With it you are building."
+          ]
         },
         {
           "id": "wb4",
-          "title": "Write the reason like a fact.",
+          "title": "Do not outsource the reason.",
           "lines": [
-            "{{name}}one sentence. Then keep it in the room today."
+            "Other people will give you a smaller, nicer why that asks less of you.",
+            "Keep the one that still makes your chest tight."
+          ]
+        },
+        {
+          "id": "wb5",
+          "title": "Remember it on the worst day, not the best.",
+          "lines": [
+            "Anyone can remember why on a good morning.",
+            "The company is built on the mornings that feel like a fight."
+          ]
+        },
+        {
+          "id": "wb6",
+          "title": "The stretch you are in will end.",
+          "lines": [
+            "The why is how you make sure you are still standing when it does.",
+            "Stay in it. Stay moving."
+          ]
+        },
+        {
+          "id": "wb7",
+          "title": "Go harder because someone needs the other side of this.",
+          "lines": [
+            "Not as drama. As a fact of your life.",
+            "Speed is love with a calendar."
+          ]
+        },
+        {
+          "id": "wb8",
+          "title": "Aim the effort.",
+          "lines": [
+            "A why without a next step is a speech.",
+            "Write the reason, then do the one thing today that serves it."
+          ]
+        },
+        {
+          "id": "wb9",
+          "title": "Quitting would be easier. That is why it is the trap.",
+          "lines": [
+            "Easy is how the same month repeats.",
+            "You did not come this far to repeat it."
+          ]
+        },
+        {
+          "id": "wb10",
+          "title": "Write it before the day talks.",
+          "lines": [
+            "Why are you still building this?",
+            "One sentence. Honest. Then go to work like you meant it."
           ],
           "kicker": "Write"
         }
@@ -903,48 +1614,84 @@
       "c": [
         {
           "id": "wc1",
-          "kicker": "The wound",
-          "title": "People who gave up sleep fine. You don't.",
+          "title": "The heaviness is not proof you picked wrong.",
           "lines": [
-            "That is not a defect. That is the last honest part of you.",
-            "The sick feeling in the morning is not proof you should stop. It is proof this still matters."
+            "It is proof you are in the middle, where it costs something.",
+            "Middles feel like endings. They are not."
           ]
         },
         {
           "id": "wc2",
-          "kicker": "Question",
-          "title": "Who is this for if it works?",
+          "title": "Bring the 1am reason into the daylight.",
           "lines": [
-            "Say the name. Or say yourself. Do not skip it.",
-            "Is this so your family is not stuck. So you do not become small again. So {{identity}} is not a joke you told once."
+            "At night you know. In the morning the bills try to make you forget.",
+            "Write it down while it is still true."
           ]
         },
         {
           "id": "wc3",
-          "kicker": "Stay with it",
-          "title": "Without a why, the bills win.",
+          "title": "This is for more than getting through Friday.",
           "lines": [
-            "The day becomes invoices and fear. With a why, the same day is a season you are walking through.",
-            "Bring the 1am reason into the morning, while it is still honest."
+            "Friday is survival. {{goal}} is the point.",
+            "Do not let survival steal the point."
           ]
         },
         {
           "id": "wc4",
-          "kicker": "The cut",
-          "title": "You do not need a new why.",
+          "title": "People stay when the why is personal.",
           "lines": [
-            "{{name}}you need to stop burying the one you already have.",
-            "The company gets built by people who remember, on the ugly days, why they started."
+            "A slogan will not carry you through unpaid invoices.",
+            "A person you love will."
           ]
         },
         {
           "id": "wc5",
-          "kicker": "Write",
+          "title": "You can be scared and still clear.",
+          "lines": [
+            "Scared means the stakes are real.",
+            "Clear means you still know who this is for."
+          ]
+        },
+        {
+          "id": "wc6",
+          "title": "The season passes. Your reason can stay.",
+          "lines": [
+            "That is the deal. Feel the season. Do not become it.",
+            "Keep walking."
+          ]
+        },
+        {
+          "id": "wc7",
+          "title": "Faster is how you honor the why.",
+          "lines": [
+            "If it matters, waiting is a strange way to love it.",
+            "Build momentum today like the reason is watching."
+          ]
+        },
+        {
+          "id": "wc8",
+          "title": "Be hard on the work, not on the meaning.",
+          "lines": [
+            "The meaning got you here. The work gets you out.",
+            "Protect both."
+          ]
+        },
+        {
+          "id": "wc9",
+          "title": "Do not stop because you cannot feel the why this hour.",
+          "lines": [
+            "Feelings flicker. Decisions stay.",
+            "You already decided. Act like it."
+          ]
+        },
+        {
+          "id": "wc10",
           "title": "Write it before the day talks.",
           "lines": [
-            "In one sentence: why you are still building {{goal}}.",
-            "The day will try to make you forget. That sentence is how you don't."
-          ]
+            "In one sentence, why you are still building this.",
+            "Put it where you will see it when the afternoon gets small."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -952,36 +1699,82 @@
       "a": [
         {
           "id": "sa1",
-          "title": "The account does not lie.",
+          "title": "The account is a record of how fast you moved.",
           "lines": [
-            "Your bank account mirrors your speed, not your potential.",
-            "Whoever acts while the committee is still talking, wins."
-          ],
-          "kicker": "The wound"
+            "It is not a record of how good the idea was.",
+            "People with the same talent are still in the meeting. You can already be on the street."
+          ]
         },
         {
           "id": "sa2",
-          "title": "Are you moving, or rearranging the feeling of moving?",
+          "title": "Today is either motion or the feeling of motion.",
           "lines": [
-            "Be honest. Today is either motion or costume."
-          ],
-          "kicker": "Question"
+            "Arranging, polishing, circling — that can look like work and still leave the number unchanged.",
+            "Be honest about which one you are doing."
+          ]
         },
         {
           "id": "sa3",
-          "title": "The gap is not intelligence.",
+          "title": "Speed is the advantage you still have.",
           "lines": [
-            "{{name}}it is minutes.",
-            "Speed is the advantage. You act while others are still thinking."
-          ],
-          "kicker": "The cut"
+            "You do not need a bigger name. You need fewer minutes wasted.",
+            "Act while other people are still talking."
+          ]
         },
         {
           "id": "sa4",
-          "title": "I have already started.",
+          "title": "The gap is not intelligence. It is minutes.",
           "lines": [
-            "Mistakes are detours. Not endings. Recalculating.",
-            "Write the next ugly step toward {{goal}}. Then do it before the night."
+            "The person who ships while you are still preparing takes the room.",
+            "You can be that person this afternoon."
+          ]
+        },
+        {
+          "id": "sa5",
+          "title": "Harder is not more hours of spinning.",
+          "lines": [
+            "Harder is more force on the thing that actually moves {{goal}}.",
+            "Pick it, then hit it before the day leaks away."
+          ]
+        },
+        {
+          "id": "sa6",
+          "title": "Momentum is built in a streak of ugly hours.",
+          "lines": [
+            "One good hour is a start. Three in a row is a company beginning to move.",
+            "Do not break the chain for a mood."
+          ]
+        },
+        {
+          "id": "sa7",
+          "title": "Waiting for perfect is how slow people stay safe.",
+          "lines": [
+            "Safe and stuck often look the same from the inside.",
+            "Ship the version that exists."
+          ]
+        },
+        {
+          "id": "sa8",
+          "title": "Stay smart about where the speed goes.",
+          "lines": [
+            "Fast on the wrong task is still late.",
+            "Aim, then accelerate."
+          ]
+        },
+        {
+          "id": "sa9",
+          "title": "Do not stop when it starts to work a little.",
+          "lines": [
+            "A little is the most dangerous place to rest.",
+            "That is when you add more speed, not less."
+          ]
+        },
+        {
+          "id": "sa10",
+          "title": "Name the next move.",
+          "lines": [
+            "Not the year. The next ugly step toward {{goal}}.",
+            "Write it, then do it before the night gets a vote."
           ],
           "kicker": "Write"
         }
@@ -989,35 +1782,82 @@
       "b": [
         {
           "id": "sb1",
-          "title": "Every day you delay, someone slower still beats you.",
+          "title": "Slow days make the bills feel permanent.",
           "lines": [
-            "Because they shipped.",
-            "You were still protecting the idea."
-          ],
-          "kicker": "The wound"
+            "Fast days do not make the bills disappear, but they make them look like a problem you are leaving.",
+            "Leave."
+          ]
         },
         {
           "id": "sb2",
-          "title": "What would a fast person do in the next hour?",
+          "title": "You already know what the next step is.",
           "lines": [
-            "Not the plan for the year. The hour."
-          ],
-          "kicker": "Question"
+            "The delay is not confusion. It is fear wearing a thinking face.",
+            "Stand up before the thought finishes."
+          ]
         },
         {
           "id": "sb3",
-          "title": "Pay with creativity, not time.",
+          "title": "While you hesitate, someone else is shipping.",
           "lines": [
-            "Time is the costume of people who are afraid to choose.",
-            "{{name}}make the ugly version exist today."
-          ],
-          "kicker": "The cut"
+            "That is not a threat to scare you. It is a clock.",
+            "Use it."
+          ]
         },
         {
           "id": "sb4",
-          "title": "Write the one move.",
+          "title": "Make the next hour expensive.",
           "lines": [
-            "If it does not scare you a little, it is not the move."
+            "Expensive for the old version of you that likes to wait.",
+            "Cheap hours are how months vanish."
+          ]
+        },
+        {
+          "id": "sb5",
+          "title": "More output, then more output.",
+          "lines": [
+            "That is momentum. It does not feel cinematic. It feels like work.",
+            "Keep it going longer than is comfortable."
+          ]
+        },
+        {
+          "id": "sb6",
+          "title": "The idea is not the bottleneck.",
+          "lines": [
+            "Your pace is.",
+            "A good idea moving slowly loses to an average idea that does not stop."
+          ]
+        },
+        {
+          "id": "sb7",
+          "title": "Be hard on delay.",
+          "lines": [
+            "Be kind to yourself, and ruthless with the waiting.",
+            "Those can live together."
+          ]
+        },
+        {
+          "id": "sb8",
+          "title": "Think for a few minutes. Then run.",
+          "lines": [
+            "Long thinking is often a hiding place.",
+            "Short thinking plus full speed is how you get through a day like this."
+          ]
+        },
+        {
+          "id": "sb9",
+          "title": "Do not pause to celebrate a small start.",
+          "lines": [
+            "A start is a start. Add the second hour.",
+            "That is how a day turns."
+          ]
+        },
+        {
+          "id": "sb10",
+          "title": "Name the next move.",
+          "lines": [
+            "What are you doing today that actually moves {{goal}}?",
+            "Write the real action, not the busy one, and then go."
           ],
           "kicker": "Write"
         }
@@ -1025,48 +1865,84 @@
       "c": [
         {
           "id": "sc1",
-          "kicker": "The wound",
-          "title": "You were still protecting the idea.",
+          "title": "If the day feels heavy, move anyway.",
           "lines": [
-            "Every day you delay, someone slower still beats you. Because they shipped.",
-            "The account does not lie. It is a record of minutes, not of potential."
+            "Heaviness is not a stop sign. It is the cost of caring while you are behind.",
+            "Pay it in work, not in freeze."
           ]
         },
         {
           "id": "sc2",
-          "kicker": "Question",
-          "title": "Are you moving, or rearranging the feeling of moving?",
+          "title": "The longest part of most hard things is the standing still.",
           "lines": [
-            "What would a fast person do in the next hour. Not the year. The hour.",
-            "Be honest. Today is either motion or costume."
+            "Once you are in motion, the same problem looks smaller.",
+            "Start before you have a speech about starting."
           ]
         },
         {
           "id": "sc3",
-          "kicker": "Stay with it",
-          "title": "The gap is not intelligence.",
+          "title": "Faster is how you outrun the story in your head.",
           "lines": [
-            "It is speed. You act while others are still thinking.",
-            "I pay for everything with my creativity, not my time. Time is the costume of people who are afraid to choose."
+            "The story says you are late and finished.",
+            "Speed gives you a different story by dinner."
           ]
         },
         {
           "id": "sc4",
-          "kicker": "The cut",
-          "title": "I have already started.",
+          "title": "You do not need a better plan as much as you need a first result.",
           "lines": [
-            "{{name}}mistakes are detours. Not endings. Recalculating.",
-            "Make the ugly version of {{goal}} exist today."
+            "Results teach. Planning in a loop does not.",
+            "Get a result, even a small ugly one."
           ]
         },
         {
           "id": "sc5",
-          "kicker": "Write",
-          "title": "Name the next ugly step.",
+          "title": "Build a run of hours that count.",
           "lines": [
-            "If it does not scare you a little, it is not the move.",
-            "Write it. Then do it before the night gets a vote."
+            "That is momentum. Protect it like money, because it is how money arrives.",
+            "Do not donate it to scrolling and worry."
           ]
+        },
+        {
+          "id": "sc6",
+          "title": "Stay on it after the first win.",
+          "lines": [
+            "First wins are fragile. Stack another.",
+            "That is how a week stops looking like the last one."
+          ]
+        },
+        {
+          "id": "sc7",
+          "title": "Hard work aimed well is enough.",
+          "lines": [
+            "You do not need to become a different species.",
+            "You need to go harder at the right thing, today, and not stop."
+          ]
+        },
+        {
+          "id": "sc8",
+          "title": "Let intelligence choose the target. Let will hit it.",
+          "lines": [
+            "If you mix those up, you either spin or you grind in the wrong place.",
+            "Choose. Then hit."
+          ]
+        },
+        {
+          "id": "sc9",
+          "title": "The people you want to catch are not resting this afternoon.",
+          "lines": [
+            "That can make you bitter, or it can make you move.",
+            "Move."
+          ]
+        },
+        {
+          "id": "sc10",
+          "title": "Name the next move.",
+          "lines": [
+            "Write the next ugly step toward {{goal}} in one line.",
+            "If it is not ugly, it is probably not the real next step."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -1074,37 +1950,82 @@
       "a": [
         {
           "id": "va1",
-          "title": "The brain cannot tell.",
+          "title": "Your mind believes what you show it.",
           "lines": [
-            "A vivid picture and a real event land the same way.",
-            "To the brain, they are the same."
-          ],
-          "kicker": "Mind"
+            "A clear picture and a real event land in the same place.",
+            "If you can see the life, you can start living toward it today."
+          ]
         },
         {
           "id": "va2",
-          "title": "Can you see {{goal}} from this room?",
+          "title": "See it from this room, not from a fantasy island.",
           "lines": [
-            "Not a mood. The light. The hour. The door with your name.",
-            "If the picture is vague, the brain has nothing to keep."
-          ],
-          "kicker": "Question"
+            "The bills can be on the table and the future can still have a shape.",
+            "That is not denial. That is direction."
+          ]
         },
         {
           "id": "va3",
-          "title": "Not someday. Now.",
+          "title": "Not someday. The room. The hour.",
           "lines": [
-            "{{name}}you are already living it for the next ten breaths.",
-            "How does it feel. What do you see. What do you hear."
-          ],
-          "kicker": "Now"
+            "Can you see yourself already holding {{goal}} — the door, the light, the way you walk in?",
+            "Stay with that until it feels closer than the unpaid invoices."
+          ]
         },
         {
           "id": "va4",
-          "title": "Present tense.",
+          "title": "A blurry picture makes a blurry day.",
           "lines": [
-            "I am. I have. I earn.",
-            "Write {{goal}} as if it already happened. Then read it out loud."
+            "If you cannot see it, you will spend the day putting out fires.",
+            "If you can see it, the fires still happen, and you still know where you are going."
+          ]
+        },
+        {
+          "id": "va5",
+          "title": "The picture is allowed to be bigger than this month.",
+          "lines": [
+            "This month is loud. It does not get to set the size of the life.",
+            "Keep the picture large while you do the small hard things."
+          ]
+        },
+        {
+          "id": "va6",
+          "title": "Visit it, then go to work.",
+          "lines": [
+            "Seeing it is not the job. Seeing it is how you remember the job.",
+            "Then move faster, because the picture is waiting."
+          ]
+        },
+        {
+          "id": "va7",
+          "title": "Hold it when you are tired.",
+          "lines": [
+            "Tired is when people switch to a smaller life.",
+            "Tired is when you need the picture most."
+          ]
+        },
+        {
+          "id": "va8",
+          "title": "Make it specific enough to walk toward.",
+          "lines": [
+            "Vague hope does not survive an afternoon of bills.",
+            "A specific scene does."
+          ]
+        },
+        {
+          "id": "va9",
+          "title": "Do not stop rehearsing it.",
+          "lines": [
+            "Repetition is how a delusional mindset gets built.",
+            "Say it until your body starts to act like it is already true."
+          ]
+        },
+        {
+          "id": "va10",
+          "title": "Write it in the present.",
+          "lines": [
+            "If you close your eyes, can you see the life already?",
+            "Write it as I am, I have, I earn — like the door already has your name."
           ],
           "kicker": "Write"
         }
@@ -1112,35 +2033,82 @@
       "b": [
         {
           "id": "vb1",
-          "title": "Vague goals stay vague.",
+          "title": "You cannot outwork a blank picture.",
           "lines": [
-            "The brain needs a precise picture.",
-            "So precise you could draw it now."
-          ],
-          "kicker": "The wound"
+            "Without a scene in your head, hard work has nowhere to go.",
+            "Give it a place."
+          ]
         },
         {
           "id": "vb2",
-          "title": "What is the first thing you change when the money is there?",
+          "title": "See the life while the account is empty.",
           "lines": [
-            "The house. The people. The hour you stop asking permission."
-          ],
-          "kicker": "Question"
+            "Anyone can see it when the number looks good.",
+            "Seeing it now is the skill."
+          ]
         },
         {
           "id": "vb3",
-          "title": "Feel it until it is inconvenient.",
+          "title": "Make it so clear you could describe the room.",
           "lines": [
-            "The more emotion you can hold, the better the filing.",
-            "Night is when it goes in deep. Read it before sleep."
-          ],
-          "kicker": "The cut"
+            "Who is there. What you hear. What you have stopped worrying about.",
+            "If you can describe it, you can walk toward it."
+          ]
         },
         {
           "id": "vb4",
-          "title": "Write the ideal day in present tense.",
+          "title": "The present tense is a tool.",
           "lines": [
-            "{{name}}home. Work. Freedom. {{goal}} already in the room."
+            "I will someday is a way of staying here.",
+            "I am is a way of leaving."
+          ]
+        },
+        {
+          "id": "vb5",
+          "title": "Let the picture pull you through the ugly hour.",
+          "lines": [
+            "The ugly hour still has to be done.",
+            "It is easier when you know what it is for."
+          ]
+        },
+        {
+          "id": "vb6",
+          "title": "Do not let the afternoon overwrite the morning image.",
+          "lines": [
+            "Afternoons shrink things.",
+            "Go back to the scene and then go back to work."
+          ]
+        },
+        {
+          "id": "vb7",
+          "title": "Move like the picture is already booking your time.",
+          "lines": [
+            "That is momentum. Not a mood. A schedule.",
+            "Fill the next hour as the person who lives there."
+          ]
+        },
+        {
+          "id": "vb8",
+          "title": "Stay with the big scene.",
+          "lines": [
+            "Small scenes produce small days.",
+            "{{goal}} deserves the large one."
+          ]
+        },
+        {
+          "id": "vb9",
+          "title": "Keep showing your mind the ending you want.",
+          "lines": [
+            "It will try to show you the bills instead.",
+            "You choose which picture gets more time."
+          ]
+        },
+        {
+          "id": "vb10",
+          "title": "Write it in the present.",
+          "lines": [
+            "Can you see the life already?",
+            "Write what you see, as if it is happening, then go do one thing that matches it."
           ],
           "kicker": "Write"
         }
@@ -1148,48 +2116,84 @@
       "c": [
         {
           "id": "vc1",
-          "kicker": "The wound",
-          "title": "Vague goals stay vague.",
+          "title": "A future you cannot see will not pull you.",
           "lines": [
-            "The brain needs a precise picture. So precise you could draw it now.",
-            "A mood is not a future. A vivid picture and a real event land the same way. To the brain, they are the same."
+            "Pain will. Bills will. Habit will.",
+            "Give yourself something stronger to walk toward."
           ]
         },
         {
           "id": "vc2",
-          "kicker": "Question",
-          "title": "Can you see {{goal}} from this room?",
+          "title": "You are allowed to see a good life from a hard day.",
           "lines": [
-            "Not later. The light. The hour. The door with your name.",
-            "If you close your eyes, are you already walking in, or are you still hoping."
+            "That is not fake. That is how people get out.",
+            "The day is real. So is the scene."
           ]
         },
         {
           "id": "vc3",
-          "kicker": "Stay with it",
-          "title": "Not someday. Now.",
+          "title": "Stay in the picture long enough for it to land.",
           "lines": [
-            "{{name}}you are already living it for the next ten breaths.",
-            "How does it feel. What do you see. What do you hear. The more emotion you can hold, the better the filing."
+            "Ten honest breaths. The room. The number. The walk in.",
+            "Then open your eyes and go."
           ]
         },
         {
           "id": "vc4",
-          "kicker": "The cut",
-          "title": "Night is when it goes in deep.",
+          "title": "If you cannot see it, you will negotiate it down.",
           "lines": [
-            "Read your goals out loud in the present tense before sleep.",
-            "I am. I have. I earn. The brain files it as you fall under."
+            "Negotiation is how {{goal}} becomes a smaller, sadder target.",
+            "See it first. Then the target stays."
           ]
         },
         {
           "id": "vc5",
-          "kicker": "Write",
-          "title": "Write the ideal day as if it already happened.",
+          "title": "Use the picture as a test for the next move.",
           "lines": [
-            "Home. Work. People. Freedom. {{goal}} already in the room.",
-            "Do not type. Handwrite if you can. The brain takes paper more seriously."
+            "Does this hour serve the scene, or does it only soothe you?",
+            "Serve the scene."
           ]
+        },
+        {
+          "id": "vc6",
+          "title": "The picture needs your speed.",
+          "lines": [
+            "A beautiful scene with no motion is a screensaver.",
+            "Move like you are late to a life that is already yours."
+          ]
+        },
+        {
+          "id": "vc7",
+          "title": "Do not drop it when you get a little relief.",
+          "lines": [
+            "Relief is not the destination.",
+            "Keep the picture until the life matches it."
+          ]
+        },
+        {
+          "id": "vc8",
+          "title": "Smart is keeping the scene and picking the next brick.",
+          "lines": [
+            "Hard is laying the brick today.",
+            "You can do both in the same hour."
+          ]
+        },
+        {
+          "id": "vc9",
+          "title": "Do not stop seeing it.",
+          "lines": [
+            "The moment you stop, the bills become the only movie in your head.",
+            "Keep your movie."
+          ]
+        },
+        {
+          "id": "vc10",
+          "title": "Write it in the present.",
+          "lines": [
+            "If you close your eyes, can you see the life already?",
+            "Write it as a fact. Then read it before the night gets a vote."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -1197,34 +2201,82 @@
       "a": [
         {
           "id": "ca1",
-          "title": "Nobody gets this by accident.",
+          "title": "Nobody builds a company by accident.",
           "lines": [
-            "Nobody builds a company by accident. For a while, it takes obsession."
-          ],
-          "kicker": "Price"
+            "For a while it takes obsession. That is not a personality flaw. That is the bill.",
+            "If you want {{goal}}, something else has to get smaller."
+          ]
         },
         {
           "id": "ca2",
-          "title": "What are you still keeping that is holding you back?",
+          "title": "Comfort is the usual price, and most people will not pay it.",
           "lines": [
-            "The app. The friend. The version of the day that stays comfortable and goes nowhere."
-          ],
-          "kicker": "Question"
+            "The app. The friend. The version of the day that stays easy and goes nowhere.",
+            "You already know what you are still keeping."
+          ]
         },
         {
           "id": "ca3",
-          "title": "Name the trade.",
+          "title": "A free goal is not the real goal.",
           "lines": [
-            "{{name}}time, comfort, and being liked are the usual bill.",
-            "If {{goal}} is free, it is not the real goal."
-          ],
-          "kicker": "The cut"
+            "If it costs you nothing, it will change nothing.",
+            "Name the trade or the day will trade for you, badly."
+          ]
         },
         {
           "id": "ca4",
-          "title": "Write what you will give.",
+          "title": "You can be under pressure and still choose.",
           "lines": [
-            "One sentence. What you want, and what you are willing to lose to have it."
+            "The bills will try to choose for you. They will choose smaller.",
+            "You choose the life, then you pay in work."
+          ]
+        },
+        {
+          "id": "ca5",
+          "title": "What you keep is also a decision.",
+          "lines": [
+            "Keeping the easy hours is how the hard month repeats.",
+            "Give some of those hours to the company, today."
+          ]
+        },
+        {
+          "id": "ca6",
+          "title": "Pay in speed, not only in suffering.",
+          "lines": [
+            "Suffering without motion is just pain.",
+            "Motion is the payment that actually buys the future."
+          ]
+        },
+        {
+          "id": "ca7",
+          "title": "Be willing to look unreasonable for a stretch.",
+          "lines": [
+            "Reasonable schedules build reasonable lives.",
+            "You said you wanted more than that."
+          ]
+        },
+        {
+          "id": "ca8",
+          "title": "Spend your intelligence on the trade, not on excuses.",
+          "lines": [
+            "A clever reason to keep the old life is still the old life.",
+            "Find the cleanest trade, then take it."
+          ]
+        },
+        {
+          "id": "ca9",
+          "title": "Do not stop paying just because it hurts.",
+          "lines": [
+            "Hurt means the price is real.",
+            "Keep going. That is how you get the thing."
+          ]
+        },
+        {
+          "id": "ca10",
+          "title": "Write the trade.",
+          "lines": [
+            "What are you willing to give for this?",
+            "One sentence. What you want, and what you will put down to have it."
           ],
           "kicker": "Write"
         }
@@ -1232,36 +2284,82 @@
       "b": [
         {
           "id": "cb1",
-          "title": "Safe goals are a costume.",
+          "title": "The life you want has a cost of hours.",
           "lines": [
-            "Do your goals scare you with the thought of failing.",
-            "Or are you only setting goals you would hit anyway."
-          ],
-          "kicker": "The wound"
+            "Not a motivational cost. A calendar cost.",
+            "If the calendar does not change, the life will not either."
+          ]
         },
         {
           "id": "cb2",
-          "title": "How disciplined can you become today?",
+          "title": "You are already paying. The question is what for.",
           "lines": [
-            "Eight focused hours on one thing. Or twenty minutes that actually count.",
-            "Starting is the whole war."
-          ],
-          "kicker": "Question"
+            "Worry costs hours. Scrolling costs hours. Work toward {{goal}} also costs hours.",
+            "Spend them on the thing you actually want."
+          ]
         },
         {
           "id": "cb3",
-          "title": "Obsession is a season, not a personality.",
+          "title": "Drop one thing that does not build.",
           "lines": [
-            "You can be obsessed until {{goal}} is no longer a rumor.",
-            "Then you can breathe. Not before."
-          ],
-          "kicker": "The cut"
+            "You do not need a new personality. You need one less leak.",
+            "Plug it today."
+          ]
         },
         {
           "id": "cb4",
-          "title": "Write the price in one line.",
+          "title": "Obsession for a season is how seasons change.",
           "lines": [
-            "{{name}}what you will stop doing so this can live."
+            "Forever-balance is a story people tell when they are tired of wanting things.",
+            "Want it. Pay for a while. Then the season moves."
+          ]
+        },
+        {
+          "id": "cb5",
+          "title": "The unpaid bills are a price too.",
+          "lines": [
+            "Staying in this stretch without moving also costs you.",
+            "Paying in work is the version that ends."
+          ]
+        },
+        {
+          "id": "cb6",
+          "title": "Give more of the day to momentum.",
+          "lines": [
+            "A little leftover energy will not move a company.",
+            "Put the good hours in first, not last."
+          ]
+        },
+        {
+          "id": "cb7",
+          "title": "You can like people and still disappear into the work for a stretch.",
+          "lines": [
+            "They will understand later, or they will not.",
+            "The company will not be built in the comments."
+          ]
+        },
+        {
+          "id": "cb8",
+          "title": "Be precise about the sacrifice.",
+          "lines": [
+            "Vague sacrifice becomes random pain.",
+            "Name it, so the pain is aimed."
+          ]
+        },
+        {
+          "id": "cb9",
+          "title": "Do not take the price back at night.",
+          "lines": [
+            "Night will try to refund the day and give you comfort.",
+            "Keep the payment. Sleep. Continue."
+          ]
+        },
+        {
+          "id": "cb10",
+          "title": "Write the trade.",
+          "lines": [
+            "What are you willing to give for {{goal}}?",
+            "Write it plainly, like a contract with yourself, then keep it this afternoon."
           ],
           "kicker": "Write"
         }
@@ -1269,48 +2367,84 @@
       "c": [
         {
           "id": "cc1",
-          "kicker": "The wound",
-          "title": "Nobody gets this by accident.",
+          "title": "If it mattered less, it would cost less.",
           "lines": [
-            "Nobody builds a company by accident. Nobody builds a body by accident. For a while, it takes obsession.",
-            "Safe goals are a costume. You would hit them anyway."
+            "The cost is information. It tells you this is the real thing.",
+            "Pay it on purpose."
           ]
         },
         {
           "id": "cc2",
-          "kicker": "Question",
-          "title": "Do your goals scare you with the thought of failing?",
+          "title": "Easy days build the life you already have.",
           "lines": [
-            "Or are you only setting goals you would hit anyway.",
-            "What are you still keeping that is holding you back. The app. The friend. The comfortable day that goes nowhere."
+            "If you like this month, keep the easy days.",
+            "If you do not, something in the day has to go."
           ]
         },
         {
           "id": "cc3",
-          "kicker": "Stay with it",
-          "title": "Name the trade.",
+          "title": "Time, comfort, and being liked are the usual bill.",
           "lines": [
-            "Time. Comfort. Social approval. If {{goal}} is free, it is not the real goal.",
-            "{{name}}how disciplined can you become today. Eight focused hours. Or twenty minutes that actually count."
+            "You do not have to enjoy paying.",
+            "You have to decide."
           ]
         },
         {
           "id": "cc4",
-          "kicker": "The cut",
-          "title": "Obsession is a season, not a personality.",
+          "title": "Under pressure, people try to keep everything.",
           "lines": [
-            "You can be obsessed until {{goal}} is no longer a rumor. Then you can breathe. Not before.",
-            "Starting is the whole war."
+            "That is how they keep the pressure.",
+            "Put something down so you can pick the company up."
           ]
         },
         {
           "id": "cc5",
-          "kicker": "Write",
-          "title": "Write the price in one line.",
+          "title": "The right price is the one that creates speed.",
           "lines": [
-            "What you want, in the present tense, and what you are willing to lose to have it.",
-            "What you will stop doing so this can live."
+            "If you paid and you are still slow, you paid in the wrong place.",
+            "Pay in motion."
           ]
+        },
+        {
+          "id": "cc6",
+          "title": "A season of focus is not a life of misery.",
+          "lines": [
+            "It is a tunnel. Tunnels end for people who keep walking.",
+            "Walk."
+          ]
+        },
+        {
+          "id": "cc7",
+          "title": "Do not romanticize the grind. Do it.",
+          "lines": [
+            "Talking about the price is not paying it.",
+            "Close the extra tab. Do the hour."
+          ]
+        },
+        {
+          "id": "cc8",
+          "title": "Stay smart about what you cut.",
+          "lines": [
+            "Cut the thing that steals the future, not the thing that keeps you alive.",
+            "Then go harder on what is left."
+          ]
+        },
+        {
+          "id": "cc9",
+          "title": "Keep paying after the first result.",
+          "lines": [
+            "First results make people go back to comfort.",
+            "That is how first results stay first results."
+          ]
+        },
+        {
+          "id": "cc10",
+          "title": "Write the trade.",
+          "lines": [
+            "What are you willing to give for this?",
+            "One honest sentence. Then go pay a piece of it before tonight."
+          ],
+          "kicker": "Write"
         }
       ]
     },
@@ -1318,36 +2452,82 @@
       "a": [
         {
           "id": "ra1",
-          "title": "The second you wake.",
+          "title": "The second you wake, the day will try to name you.",
           "lines": [
-            "Four sentences. Out loud. Before the day talks back.",
-            "A delusional mindset is built by repetition."
-          ],
-          "kicker": "Morning"
+            "Bills. Tired. Behind. That is a loud naming.",
+            "You get to speak first."
+          ]
         },
         {
           "id": "ra2",
-          "title": "Something extraordinary will happen to me today.",
+          "title": "Say something bigger than the morning.",
           "lines": [
-            "It will sound ridiculous. That is the point."
-          ],
-          "kicker": "Say this"
+            "It will sound ridiculous. That is the point.",
+            "Repetition is how a delusional mindset gets built."
+          ]
         },
         {
           "id": "ra3",
           "title": "I am already the person I am becoming.",
           "lines": [
-            "{{name}}I already have {{goal}}. It is only a matter of time.",
-            "In the mirror: I love you. I know where you are going."
-          ],
-          "kicker": "Say this"
+            "Not later. Not when the account looks better.",
+            "Say it like time is the only remaining detail."
+          ]
         },
         {
           "id": "ra4",
-          "title": "Write it like a fact.",
+          "title": "Out loud matters.",
           "lines": [
-            "Then read it before the night gets a vote.",
-            "Everything is lining up. Only good comes from this. I am safe."
+            "In your head it is a thought. Out loud it is a decision.",
+            "The room should hear who you are."
+          ]
+        },
+        {
+          "id": "ra5",
+          "title": "Do not let the unpaid invoices introduce you.",
+          "lines": [
+            "They can be on the table and still not be your name.",
+            "Your name is the sentence you keep repeating."
+          ]
+        },
+        {
+          "id": "ra6",
+          "title": "Speak it, then move like it is true.",
+          "lines": [
+            "Words without motion fade by noon.",
+            "Words plus speed become a day."
+          ]
+        },
+        {
+          "id": "ra7",
+          "title": "Keep saying it on the days it feels fake.",
+          "lines": [
+            "Fake is just early.",
+            "Early is where every real identity starts."
+          ]
+        },
+        {
+          "id": "ra8",
+          "title": "Be precise. Be stubborn.",
+          "lines": [
+            "A fuzzy sentence will not survive a hard afternoon.",
+            "A clear one will, if you do not drop it."
+          ]
+        },
+        {
+          "id": "ra9",
+          "title": "Do not stop talking to yourself like the future is already here.",
+          "lines": [
+            "The future arrives for people who rehearse it and then work.",
+            "Do both."
+          ]
+        },
+        {
+          "id": "ra10",
+          "title": "Write it in the present.",
+          "lines": [
+            "Who are you saying you are out loud?",
+            "Write it like a fact. Then read it before the night gets a vote."
           ],
           "kicker": "Write"
         }
@@ -1355,35 +2535,82 @@
       "b": [
         {
           "id": "rb1",
-          "title": "The day will try to talk you out of yourself.",
+          "title": "You become the sentence you repeat.",
           "lines": [
-            "That is its job. Your job is to speak first."
-          ],
-          "kicker": "The wound"
+            "If the sentence is I am behind, the day will agree.",
+            "Give it a better sentence, then give it a better hour."
+          ]
         },
         {
           "id": "rb2",
-          "title": "Who are you when nobody is watching?",
+          "title": "Say it before the phone.",
           "lines": [
-            "{{identity}}",
-            "If you cannot say it out loud, the day will say something smaller."
-          ],
-          "kicker": "Question"
+            "The phone will name you as a problem to solve.",
+            "You name yourself as the person building {{goal}}."
+          ]
         },
         {
           "id": "rb3",
-          "title": "My dreams are bigger than my fears.",
+          "title": "Something extraordinary can still happen today.",
           "lines": [
-            "I am always in the right place at the right time.",
-            "Money works for me. Speed is my advantage."
-          ],
-          "kicker": "Say this"
+            "It sounds like a line. Say it anyway.",
+            "People who never say it almost never see it."
+          ]
         },
         {
           "id": "rb4",
-          "title": "Write the four sentences.",
+          "title": "Identity is a practice, not a mood.",
           "lines": [
-            "{{name}}present tense. Then say them before the first screen."
+            "You do not wait to feel like that person.",
+            "You say it, and then you act in a way that would make the sentence true."
+          ]
+        },
+        {
+          "id": "rb5",
+          "title": "The bills can hear you too.",
+          "lines": [
+            "They do not get the last word.",
+            "You do."
+          ]
+        },
+        {
+          "id": "rb6",
+          "title": "Louder is not better. Clearer is.",
+          "lines": [
+            "One clean sentence, said like you mean it, then work that matches it.",
+            "That is the whole morning ritual."
+          ]
+        },
+        {
+          "id": "rb7",
+          "title": "Keep the sentence when the afternoon gets small.",
+          "lines": [
+            "Small afternoons try to rename you.",
+            "Read it again. Then go harder."
+          ]
+        },
+        {
+          "id": "rb8",
+          "title": "Do not use clever words to hide.",
+          "lines": [
+            "Simple and true is stronger than poetic and vague.",
+            "Say who you are in language a tired person can remember."
+          ]
+        },
+        {
+          "id": "rb9",
+          "title": "Stay with the sentence for weeks, not minutes.",
+          "lines": [
+            "Once is a wish. Daily is a build.",
+            "You are building."
+          ]
+        },
+        {
+          "id": "rb10",
+          "title": "Write it in the present.",
+          "lines": [
+            "Who are you saying you are out loud?",
+            "Write the line you will actually speak tomorrow morning, then speak it today too."
           ],
           "kicker": "Write"
         }
@@ -1391,48 +2618,84 @@
       "c": [
         {
           "id": "rc1",
-          "kicker": "The wound",
-          "title": "The day will try to talk you out of yourself.",
+          "title": "If you do not name yourself, the day will.",
           "lines": [
-            "That is its job. Your job is to speak first.",
-            "A delusional mindset is built by repetition. Every day. Before the first screen."
+            "The day is not generous. It will use whatever is loudest, and right now the bills are loud.",
+            "Speak first."
           ]
         },
         {
           "id": "rc2",
-          "kicker": "Question",
-          "title": "Who are you saying you are out loud?",
+          "title": "Say I already have it. It is only a matter of time.",
           "lines": [
-            "{{identity}}",
-            "If you cannot say it, the day will say something smaller."
+            "{{name}}, that is not a lie if you are willing to work like it is true.",
+            "Time plus refusing to stop is how it becomes true."
           ]
         },
         {
           "id": "rc3",
-          "kicker": "Say this",
-          "title": "Four sentences. Out loud.",
+          "title": "The voice in your head is training.",
           "lines": [
-            "Something extraordinary will happen to me today.",
-            "I am already the person I am becoming. I already have {{goal}}. It is only a matter of time. In the mirror: I love you. I know where you are going."
+            "Train it toward the person who gets out, not the person who explains why they stayed.",
+            "You are in training every morning."
           ]
         },
         {
           "id": "rc4",
-          "kicker": "Day",
-          "title": "While you work.",
+          "title": "Out loud, even if you are alone.",
           "lines": [
-            "I pay for everything with my creativity, not my time. Speed is my advantage.",
-            "My dreams are bigger than my fears. I am always in the right place. Money works for me."
+            "Alone is when the truth has less audience and more power.",
+            "Use that."
           ]
         },
         {
           "id": "rc5",
-          "kicker": "Night",
-          "title": "Right before sleep.",
+          "title": "Do not wait until you have earned the sentence.",
           "lines": [
-            "Everything is lining up for me. Only good comes from this. I am safe.",
-            "{{name}}write it like a fact. Then read it before the night gets a vote."
+            "The sentence is how you earn it.",
+            "Say it while you are still in the mess."
           ]
+        },
+        {
+          "id": "rc6",
+          "title": "Match the words with pace.",
+          "lines": [
+            "A strong sentence followed by a slow day is a leak.",
+            "Say it, then build momentum like you were overheard."
+          ]
+        },
+        {
+          "id": "rc7",
+          "title": "Repeat it until it is boring.",
+          "lines": [
+            "Boring means it has moved in.",
+            "That is what you want."
+          ]
+        },
+        {
+          "id": "rc8",
+          "title": "Keep your head. Keep the line.",
+          "lines": [
+            "You can be intelligent about the work and still speak like the future is decided.",
+            "Those two together are hard to stop."
+          ]
+        },
+        {
+          "id": "rc9",
+          "title": "Do not let one bad hour rewrite your name.",
+          "lines": [
+            "Hours fluctuate. Identity stays, if you hold it.",
+            "Hold it."
+          ]
+        },
+        {
+          "id": "rc10",
+          "title": "Write it in the present.",
+          "lines": [
+            "Who are you saying you are out loud?",
+            "Write four short facts about that person, then say them before the day talks back."
+          ],
+          "kicker": "Write"
         }
       ]
     }

@@ -6,7 +6,7 @@ GitHub Pages for `https://staydelusional.com`.
 
 - Guides: `/` (the original pages)
 - Catalog: `/content/v1/catalog.json`
-- Metrics: `/dashboard/`
+- Metrics: `/dashboard/` (password gate, for you only)
 - Telemetry POST: `/content/v1/telemetry` (needs Cloudflare Pages + `GITHUB_TOKEN`, or the GitHub Action dispatch)
 
 ## Domain
@@ -21,9 +21,6 @@ Until DNS is live, the same files are at `https://taskfather.github.io/stay-delu
 
 ## Live metrics
 
-GitHub Pages cannot receive POST. Two free options:
+The dashboard at `/dashboard/` is gated. It is for you, not for app users. The page is still on public Pages, so the password is a gate, not server auth.
 
-1. **Cloudflare Pages** on this repo (recommended). Set secret `GITHUB_TOKEN` (fine-grained, `actions:write` on this repo only). POST `/content/v1/telemetry` then fires `repository_dispatch`.
-2. Manual: Actions → ingest → paste `{"events":[...]}`.
-
-The iOS app already POSTs to `https://staydelusional.com/content/v1/telemetry` and keeps events on-device until that succeeds.
+GitHub Pages still cannot receive POST. `staydelusional.com` is not usable until DNS points at GitHub and the cert is `staydelusional.com` (it currently serves `*.one.com`).
